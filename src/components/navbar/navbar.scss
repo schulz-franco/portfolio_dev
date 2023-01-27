@@ -1,0 +1,92 @@
+@import "../../colors";
+
+nav.mobile {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    
+    div.container {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 1.5rem 2rem;
+        background-color: $dark1;
+        position: relative;
+        z-index: 2;
+        
+        h2 {
+            font-size: 1.7em;
+
+            b {
+                color: $primary;
+                padding: 0 .1rem;
+            }
+    
+        }
+    
+        div.menu {
+            position: relative;
+            display: grid;
+            align-content: center;
+            grid-template-rows: min-content min-content min-content;
+            gap: 6px;
+            width: 30px;
+            cursor: pointer;
+    
+            div {
+                width: 100%;
+                height: 4px;
+                border-radius: 3px;
+                background-color: $primary;
+                transition: all 100ms ease-in;
+            }
+        }
+    
+        div.menu.open {
+            div:first-child {
+                transform: translateY(10px) rotate(-45deg);
+            }
+    
+            div:nth-child(2) {
+                opacity: 0;
+            }
+    
+            div:last-child {
+                transform: translateY(-10px) rotate(45deg);
+            }
+        }
+    }
+
+    div.scrollable {
+        position: fixed;
+        top: 0;
+        background-color: $dark2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 2rem;
+        gap: 1.4rem;
+        z-index: 1;
+        transform: translateY(calc(-341px + 79px));
+        transition: all 320ms ease;
+
+        div {
+            text-decoration: none;
+            color: $white;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+        }
+
+        a.button {
+            width: 100%;
+            font-size: 1.1rem;
+        }
+    }
+
+    div.scrollable.open {
+        transform: translateY(79px);
+    }
+}

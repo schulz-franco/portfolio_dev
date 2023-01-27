@@ -1,0 +1,45 @@
+@import "../../colors";
+
+section#inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 2rem;
+
+    h3, h2 {
+        font-weight: normal;
+
+        span {
+            color: $primary;
+        }
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+    
+    h3 {
+        margin-top: 0.5rem;
+        padding-right: 3rem;
+        color: $secondary;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    a.button {
+        margin-top: 1rem;
+        width: 150px;
+    }
+
+    span.image {
+        position: absolute;
+        font-size: 16em;
+        right: 0.8rem;
+        top: -2.2rem;
+        -webkit-text-stroke: 1px $primary;
+        color: $dark1;
+        z-index: -2; 
+    }
+}

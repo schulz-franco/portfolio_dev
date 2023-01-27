@@ -1,0 +1,28 @@
+{
+    "years": [
+        {
+            "year": 2020,
+            "title": "Titulo 1",
+            "tecnologias": ["html", "css", "sass", "javascript"],
+            "text": "Texto de prueba 1"
+        },
+        {
+            "year": 2021,
+            "title": "Titulo 2",
+            "tecnologias": ["html", "css", "sass", "javascript"],
+            "text": "Texto de prueba 2"
+        },
+        {
+            "year": 2022,
+            "title": "Titulo 3",
+            "tecnologias": ["html", "css", "sass", "javascript"],
+            "text": "Texto de prueba 3"
+        },
+        {
+            "year": 2023,
+            "title": "Titulo 4",
+            "tecnologias": ["html", "css", "sass", "javascript"],
+            "text": "Texto de prueba 4"
+        }
+    ]
+}

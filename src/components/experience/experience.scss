@@ -1,0 +1,42 @@
+@import "../../colors";
+
+section#experiencia {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: $dark1;
+    gap: 1rem;
+    
+    h2 {
+        font-size: 1.8em;
+        font-weight: normal;
+    }
+
+    div.years {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: $dark3;
+        position: relative;
+
+        span {
+            text-align: center;
+            padding: 0.5rem;
+            border-top: 2px solid transparent;
+            grid-row: 1/2;
+            cursor: pointer;
+        }
+
+        span.active {
+            color: $primary;
+        }
+
+        div.active {
+            position: absolute;
+            width: 25%;
+            transition: transform 200ms ease-in;
+            height: 2px;
+            background-color: $primary;
+        }
+    }
+}

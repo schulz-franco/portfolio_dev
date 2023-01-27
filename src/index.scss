@@ -1,0 +1,36 @@
+@import "./colors";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	color: $white;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+	padding-top: 79px;
+	background-color: $dark1;
+	overflow-x: hidden;
+}
+
+a.button {
+	display: flex;
+	justify-content: center;
+	background-color: $primary;
+	font-weight: bold;
+	padding: 0.6rem;
+	border-radius: 4px;
+	color: $white;
+	text-decoration: none;
+}
+
+section {
+	position: relative;
+	z-index: 0;
+}
