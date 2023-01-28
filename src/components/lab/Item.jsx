@@ -1,6 +1,5 @@
 
-const Project = ({ data }) => {
-
+const Item = ({ data }) => {
     const hrefValue = data.url ? data.url : data.github;
     const linkValue = data.url ? 'Visitar proyecto' : 'Ver en github';
 
@@ -9,12 +8,10 @@ const Project = ({ data }) => {
             <img width={40} height={40} src={data.image} alt={data.title} />
             <h4>{data.title}</h4>
             <p>{data.text}</p>
-            <div>
-                <a href={hrefValue}>{linkValue}</a>
-                <span>{data.year}</span>
-            </div>
+            <a href={hrefValue}>{linkValue}</a>
+            {data.state && <span>Incompleto</span>}
         </article>
     )
 }
 
-export default Project
+export default Item

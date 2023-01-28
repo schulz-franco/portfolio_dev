@@ -1,0 +1,52 @@
+@import "../../colors";
+
+section#laboratorio {
+    padding: 2rem;
+    background-color: $dark1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h2 {
+        margin-bottom: -0.5rem;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        background-color: $dark3;
+        padding: 1.5rem 1rem 1rem 1rem;
+        border-radius: 6px;
+
+        img {
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            margin-bottom: 0.4rem;
+            font-weight: normal;
+            font-size: 1.2em;
+        }
+
+        p {
+            color: $secondary;
+            word-wrap: break-word;
+            word-break: keep-all;
+            margin-bottom: 0.5rem;
+        }
+
+        span {
+            font-size: 0.9rem;
+            color: $secondary;
+            opacity: 0.6;
+            margin-top: 0.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $primary;
+        }
+    }
+}

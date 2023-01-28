@@ -37,6 +37,7 @@ section#experiencia {
     h3 {
         font-weight: normal;
         font-size: 1.3em;
+        margin-top: 0.5rem;
     }
 
     div.tech {
@@ -50,7 +51,6 @@ section#experiencia {
     }
 
     p {
-        margin-top: -0.5rem;
         color: $secondary;
         word-wrap: break-word;
         word-break: keep-all;
