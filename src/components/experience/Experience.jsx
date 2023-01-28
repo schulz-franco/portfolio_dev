@@ -24,6 +24,14 @@ const Experience = () => {
                 <span className={ifCurrent(2)} onClick={()=> setCurrentOption(2)}>2022</span>
                 <span className={ifCurrent(3)} onClick={()=> setCurrentOption(3)}>2023</span>
             </div>
+            <h3>{data.years[currentOption].title}</h3>
+            <div className="tech">
+                {data.years[currentOption].learn.map((tech, index) => {
+                    if (index !== data.years[currentOption].learn.length - 1) return <span key={tech}>{tech} - </span>
+                    return <span key={tech}>{tech}</span> 
+                })}
+            </div>
+            <p>{data.years[currentOption].text}</p>
         </section>
     )
 }

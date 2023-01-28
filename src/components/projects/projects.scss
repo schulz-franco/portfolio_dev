@@ -1,0 +1,53 @@
+@import "../../colors";
+
+section#proyectos {
+    padding: 2rem;
+    background-color: $dark3;
+    position: relative;
+
+    div.container {
+        display: grid;
+        grid-auto-rows: min-content;
+        margin-top: 1rem;
+        gap: 1.5rem;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            gap: 0.8rem;
+            border: 1px solid $primary;
+            border-bottom: 2px solid $primary;
+            border-radius: 4px;
+
+            h4 {
+                font-size: 1.2em;
+                opacity: 0.9;
+                font-weight: 500;
+            }
+
+            p {
+                word-wrap: break-word;
+                word-break: keep-all;
+                color: $secondary;
+                font-size: 1rem;
+            }
+
+            a {
+                font-size: 1rem;
+                text-decoration: none;
+                color: $primary;
+                cursor: pointer;
+            }
+        }
+
+        a.github {
+            font-weight: 500;
+            color: $primary;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+
+}

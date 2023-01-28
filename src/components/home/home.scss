@@ -7,21 +7,16 @@ section#inicio {
     padding: 3rem 2rem;
 
     h3, h2 {
-        font-weight: normal;
-
         span {
             color: $primary;
         }
-    }
-
-    h2 {
-        font-size: 1.6em;
     }
     
     h3 {
         margin-top: 0.5rem;
         padding-right: 3rem;
         color: $secondary;
+        font-weight: normal;
 
         span {
             font-weight: bold;

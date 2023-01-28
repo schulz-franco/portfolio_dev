@@ -7,7 +7,7 @@ import jobsImg from "../../assets/jobs.svg";
 import labImg from "../../assets/lab.svg";
 import bookImg from "../../assets/book.svg";
 
-const scrollsMobile = [0, 300, 500, 200, 200, 200];
+const scrollsMobile = [0, 300, 630, 1050, 200, 200];
 
 const Option = ({id, image, name, setOpen})=> {
 
