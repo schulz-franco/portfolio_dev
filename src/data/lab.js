@@ -1,6 +1,6 @@
-import gameImg from "../assets/game.svg";
-import authImg from "../assets/auth.svg";
-import gridImg from "../assets/grid.svg";
+import gameImg from "../assets/icons/game.svg";
+import authImg from "../assets/icons/auth.svg";
+import gridImg from "../assets/icons/grid.svg";
 
 export const data = [
     {

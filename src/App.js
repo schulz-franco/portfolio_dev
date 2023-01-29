@@ -1,4 +1,5 @@
 import Card from "./components/card/Card";
+import Contact from "./components/contact/Contact";
 import Experience from "./components/experience/Experience";
 import Home from "./components/home/Home";
 import Knowledge from "./components/knowledge/Knowledge";
@@ -8,7 +9,7 @@ import Projects from "./components/projects/Projects";
 
 function App() {
     return (
-		<div className="App">
+		<div>
 			<Navbar />
 			<Home />
 			<Card />
@@ -16,6 +17,7 @@ function App() {
 			<Projects />
 			<Lab />
 			<Knowledge />
+			<Contact />
 	    </div>
     );
 }

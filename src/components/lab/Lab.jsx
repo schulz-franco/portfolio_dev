@@ -1,7 +1,7 @@
 import Item from "./Item";
 import "./lab.scss";
 
-const { data } = require("../../data/lab.js");
+const { data } = require("../../data/lab");
 
 const Lab = () => {
     return (

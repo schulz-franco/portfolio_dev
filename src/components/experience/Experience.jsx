@@ -19,10 +19,9 @@ const Experience = () => {
             <h2>Experiencia práctica</h2>
             <div className="years">
                 <div style={divActiveStyle} className="active"></div>
-                <span className={ifCurrent(0)} onClick={()=> setCurrentOption(0)}>2020</span>
-                <span className={ifCurrent(1)} onClick={()=> setCurrentOption(1)}>2021</span>
-                <span className={ifCurrent(2)} onClick={()=> setCurrentOption(2)}>2022</span>
-                <span className={ifCurrent(3)} onClick={()=> setCurrentOption(3)}>2023</span>
+                {data.years.map((info, index) => {
+                    return <span key={info.year} className={ifCurrent(index)} onClick={()=> setCurrentOption(index)}>{info.year}</span>
+                })}
             </div>
             <h3>{data.years[currentOption].title}</h3>
             <div className="tech">

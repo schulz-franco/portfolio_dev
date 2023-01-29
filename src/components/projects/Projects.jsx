@@ -1,7 +1,7 @@
 import Project from "./Project";
 import "./projects.scss";
 
-const { data } = require("../../data/projects.js");
+const { data } = require("../../data/projects");
 
 const Projects = () => {
     return (

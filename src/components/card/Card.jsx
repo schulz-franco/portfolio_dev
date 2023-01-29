@@ -1,9 +1,8 @@
 import "./card.scss";
-import instagramImg from "../../assets/instagram.png";
-import linkedinImg from "../../assets/linkedin.png";
-import githubImg from "../../assets/github.png";
-import whatsappImg from "../../assets/whatsapp.png";
-
+import instagramImg from "../../assets/social/instagram.png";
+import linkedinImg from "../../assets/social/linkedin.png";
+import githubImg from "../../assets/social/github.png";
+import whatsappImg from "../../assets/social/whatsapp.png";
 
 const data = require("../../data/card.json");
 

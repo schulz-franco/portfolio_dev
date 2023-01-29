@@ -1,7 +1,7 @@
-import socialImg from "../assets/auth.svg";
-import gearImg from "../assets/gear.svg";
-import webImg from "../assets/web.svg";
-import chatImg from "../assets/chat.svg";
+import socialImg from "../assets/icons/auth.svg";
+import gearImg from "../assets/icons/gear.svg";
+import webImg from "../assets/icons/web.svg";
+import chatImg from "../assets/icons/chat.svg";
 
 export const data = {
     "projects": [

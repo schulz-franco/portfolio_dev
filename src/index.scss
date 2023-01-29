@@ -38,3 +38,11 @@ section h2 {
     font-size: 1.6em;
 	font-weight: normal;
 }
+
+p {
+	color: $secondary;
+	font-size: 1.1rem;
+	word-wrap: break-word;
+	word-break: keep-all;
+	line-height: 1.4rem;
+}

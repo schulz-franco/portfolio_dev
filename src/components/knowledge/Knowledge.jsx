@@ -1,32 +1,30 @@
+import { useState } from "react";
 import "./knowledge.scss";
-import htmlImg from "../../assets/technologies/html.png";
-import cssImg from "../../assets/technologies/css.png";
-import sassImg from "../../assets/technologies/sass.png";
-import jsImg from "../../assets/technologies/js.png";
-import reactImg from "../../assets/technologies/react.png";
-import nodeImg from "../../assets/technologies/node.png";
-import pythonImg from "../../assets/technologies/python.png";
-import gitImg from "../../assets/technologies/git.png";
-import sqlImg from "../../assets/technologies/sql.png";
-import mongoImg from "../../assets/technologies/mongo.png";
-import nextImg from "../../assets/technologies/next.svg";
+
+const { data } = require("../../data/knowledge");
 
 const Knowledge = () => {
+
+    const [moreInfo, setMoreInfo] = useState("");
+    const [focus, setFocus] = useState(-1);
+
+    const onClickHandler = (index, text)=> {
+        setMoreInfo(text);
+        setFocus(index !== focus ? index : -1);
+    }
+
+    const currentStyle = { borderColor: "#FF3A5E" }
+    const textStyle = focus !== -1 ? { minHeight: "90px" } : {}
+    const currentText = focus !== -1 ? moreInfo : "Toca uno de los cuadros para ver mas información respecto a esa tecnología."
+
     return (
         <section id="conocimientos">
-            <h2>Tecnologías</h2>
+            <h2>Conocimientos</h2>
+            <p style={textStyle}>{currentText}</p>
             <div className="container">
-                <div><img width={40} height={40} src={htmlImg} alt="HTML" /></div>
-                <div><img width={38} height={38} src={cssImg} alt="CSS" /></div>
-                <div><img width={40} height={40} src={sassImg} alt="SASS" /></div>
-                <div><img width={36} height={36} src={jsImg} alt="Javascript" /></div>
-                <div><img width={40} height={40} src={reactImg} alt="React" /></div>
-                <div><img width={50} height={50} src={nodeImg} alt="NodeJS" /></div>
-                <div><img width={50} height={50} src={pythonImg} alt="Python" /></div>
-                <div><img width={40} height={40} src={gitImg} alt="Git" /></div>
-                <div><img width={40} height={40} src={sqlImg} alt="SQL" /></div>
-                <div><img width={40} height={40} src={mongoImg} alt="MongoDB" /></div>
-                <div><img width={46} height={46} src={nextImg} alt="NextJS" /></div>
+                {data.map((tech, index) => {
+                    return <div style={focus === index ? currentStyle : {}} onClick={()=> onClickHandler(index, tech.text)} key={tech.name}><img width={tech.size ? tech.size : 40} height={tech.size ? tech.size : 40} src={tech.src} alt={tech.name} /></div>
+                })}
             </div>
         </section>
     )
