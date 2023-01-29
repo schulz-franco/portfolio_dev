@@ -15,7 +15,7 @@ section#laboratorio {
         display: flex;
         flex-direction: column;
         background-color: $dark3;
-        padding: 1.5rem 1rem 1rem 1rem;
+        padding: 1.5rem;
         border-radius: 6px;
 
         img {
@@ -25,7 +25,7 @@ section#laboratorio {
         }
 
         h4 {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.5rem;
             font-weight: normal;
             font-size: 1.2em;
         }
@@ -34,7 +34,8 @@ section#laboratorio {
             color: $secondary;
             word-wrap: break-word;
             word-break: keep-all;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.7rem;
+            line-height: 1.3rem;
         }
 
         span {
@@ -47,6 +48,7 @@ section#laboratorio {
         a {
             text-decoration: none;
             color: $primary;
+            font-size: 1.1rem;
         }
     }
 }

@@ -41,7 +41,7 @@ section#experiencia {
     }
 
     div.tech {
-        margin-top: -0.7rem;
+        margin-top: -0.6rem;
 
         span {
             color: $primary;
@@ -55,6 +55,7 @@ section#experiencia {
         word-wrap: break-word;
         word-break: keep-all;
         line-height: 1.4rem;
-        min-height: 204px;
+        min-height: 224px;
+        font-size: 1.1rem;
     }
 }

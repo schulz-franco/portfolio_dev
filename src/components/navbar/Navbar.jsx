@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./navbar.scss";
-import homeImg from "../../assets/home.svg";
-import profileImg from "../../assets/profile.svg";
-import experienceImg from "../../assets/experience.svg";
-import jobsImg from "../../assets/jobs.svg";
-import labImg from "../../assets/lab.svg";
-import bookImg from "../../assets/book.svg";
+import homeImg from "../../assets/navbar/home.svg";
+import profileImg from "../../assets/navbar/profile.svg";
+import experienceImg from "../../assets/navbar/experience.svg";
+import jobsImg from "../../assets/navbar/jobs.svg";
+import labImg from "../../assets/navbar/lab.svg";
+import bookImg from "../../assets/navbar/book.svg";
 
 const scrollsMobile = [0, 300, 630, 1050, 200, 200];
 
@@ -46,7 +46,6 @@ const Navbar = () => {
 				<Option id={3} image={jobsImg} name='Proyectos' setOpen={setOpen} />
 				<Option id={4} image={labImg} name='Laboratorio' setOpen={setOpen} />
 				<Option id={5} image={bookImg} name='Conocimientos' setOpen={setOpen} />
-				<a href="#inicio" className="button">Contactar ahora</a>
 			</div>
 		</nav>
 	)

@@ -3,7 +3,6 @@ import gearImg from "../assets/gear.svg";
 import webImg from "../assets/web.svg";
 import chatImg from "../assets/chat.svg";
 
-
 export const data = {
     "projects": [
         {
