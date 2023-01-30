@@ -54,5 +54,5 @@ export const data = {
             github: "https://github.com/schulz-franco/sistema_gestion_comercial"
         }
     ],
-    github: "https://github.com/schulz-franco"
+    github: "https://github.com/schulz-franco?tab=repositories"
 }

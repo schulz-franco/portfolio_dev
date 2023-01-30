@@ -5,7 +5,7 @@ import Joi from "joi";
 
 const Contact = () => {
 
-    const [alert, setAlert] = useState({ value: false, type: false })
+    const [alert, setAlert] = useState({ value: false, type: false });
 
     const formSchema = Joi.object({
         name: Joi.string().min(4).max(20).required().pattern(/^[a-zA-Z]+$/),
@@ -18,19 +18,19 @@ const Contact = () => {
         const result = formSchema.validate(formData);
         const { error } = result;
         if (error) {
-            const path = error.details[0].path[0] 
+            const path = error.details[0].path[0];
             if (path === "name") {
-                setAlert({ value: true, type: false, message: "El nombre no es válido, solo se permiten letras." })
+                setAlert({ value: true, type: false, message: "El nombre no es válido, solo se permiten letras." });
             } else if (path === "lastname") {
-                setAlert({ value: true, type: false, message: "El apellido no es válido, solo se permiten letras."  })
+                setAlert({ value: true, type: false, message: "El apellido no es válido, solo se permiten letras."  });
             } else if (path === "email") {
-                setAlert({ value: true, type: false, message: "El email no es válido o no esta permitido."  })
+                setAlert({ value: true, type: false, message: "El email no es válido o no esta permitido."  });
             } else if (path === "message") {
-                setAlert({ value: true, type: false, message: "Ocurrió un error con el mensaje, intente recargar la página."  })
+                setAlert({ value: true, type: false, message: "Ocurrió un error con el mensaje, intente recargar la página."  });
             }
-            return false
+            return false;
         } else {
-            return true
+            return true;
         }
     }
 
@@ -39,8 +39,8 @@ const Contact = () => {
         const existQuantity = localStorage.getItem("messageQuantity");
         const existMessage = localStorage.getItem("message");
         if (existMessage.toLowerCase() === message) {
-            setAlert({ value: true, type: false, message: "Ya has enviado ese mensaje." })
-            return false
+            setAlert({ value: true, type: false, message: "Ya has enviado ese mensaje." });
+            return false;
         }
         if (existQuantity) {
             const item = parseInt(existQuantity);
@@ -48,30 +48,30 @@ const Contact = () => {
                 localStorage.setItem("messageQuantity", item + 1);
             } else {
                 setAlert({ value: true, type: false, message: "Ya has enviado demasiados mensajes." });
-                return false
+                return false;
             }
         } else {
             localStorage.setItem("messageQuantity", 1);
         }
-        return true
+        return true;
     }
 
     const onSubmitHandler = (ev)=> {
         ev.preventDefault();
-        const [name, lastname, email, message] = [ev.target[0].value, ev.target[1].value, ev.target[2].value, ev.target[3].value.toLowerCase()]
+        const [name, lastname, email, message] = [ev.target[0].value, ev.target[1].value, ev.target[2].value, ev.target[3].value.toLowerCase()];
         if (validateForm({ name, lastname, email, message })) {
             if (validateFlood(message)) {
                 emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, ev.target, process.env.REACT_APP_PUBLIC_KEY).then(res => {
                     localStorage.setItem("message", message);
-                    return setAlert({ value: true, type: true, message: "Tu mensaje se envió correctamente." })
+                    return setAlert({ value: true, type: true, message: "Tu mensaje se envió correctamente." });
                 }).catch(error => {
-                    return setAlert({ value: true, type: false, message: "Ha ocurrido un error, intente más tarde." })
+                    return setAlert({ value: true, type: false, message: "Ha ocurrido un error, intente más tarde." });
                 })
             } else {
-                return
+                return;
             }
         } else {
-            return
+            return;
         }
     }
 

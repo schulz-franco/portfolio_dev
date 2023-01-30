@@ -9,13 +9,13 @@ import bookImg from "../../assets/navbar/book.svg";
 import contactImg from "../../assets/navbar/contact.svg";
 import creditsImg from "../../assets/navbar/credits.svg";
 
-const scrollsMobile = [0, 300, 630, 1050, 200, 200, 200, 200];
+const sections = ["inicio", "quiensoy", "experiencia", "proyectos", "laboratorio", "conocimientos", "contacto", "creditos"];
 
 const Option = ({id, image, name, setOpen})=> {
 
 	const onClickHandler = ()=> {
 		setOpen(false);
-		window.scroll({ top: scrollsMobile[id], behavior: 'smooth' });
+		window.scroll({ top: document.getElementById(sections[id]).offsetTop - 80, behavior: 'smooth' })
 	}
 
 	return <div onClick={onClickHandler}><img width={20} height={20} src={image} alt={name} />{name}</div>
