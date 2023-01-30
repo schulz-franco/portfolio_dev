@@ -1,7 +1,7 @@
 import Card from "./components/card/Card";
 import Contact from "./components/contact/Contact";
 import Experience from "./components/experience/Experience";
-import Footer from "./components/footer/Footer";
+import Credits from "./components/credits/Credits";
 import Home from "./components/home/Home";
 import Knowledge from "./components/knowledge/Knowledge";
 import Lab from "./components/lab/Lab";
@@ -19,7 +19,8 @@ function App() {
 			<Lab />
 			<Knowledge />
 			<Contact />
-			<Footer />
+			<Credits />
+			<span className="copy">Copyright © 2023<b> Franco Schulz.</b> Todos los derechos reservados.</span>
 	    </div>
     );
 }
