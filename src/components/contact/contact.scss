@@ -22,7 +22,7 @@ section#contacto {
         margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
-        gap: 1.4rem;
+        gap: 1rem;
 
         input, textarea {
             width: 100%;
@@ -52,6 +52,7 @@ section#contacto {
             border-radius: 4px;
             font-size: 1rem;
             font-weight: bold;
+            margin-top: 0.5rem;
             cursor: pointer;
         }
 
@@ -72,7 +73,7 @@ section#contacto {
             border-radius: 4px;
             color: $primary;
             font-size: 1rem;
-            margin: -0.4rem 0;
+            margin: 0 0 -0.5rem 0;
             animation: error 200ms ease-in;
             animation-fill-mode: forwards;
         }
