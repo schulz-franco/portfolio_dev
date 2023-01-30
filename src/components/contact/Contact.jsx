@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./contact.scss";
 import emailjs from "@emailjs/browser";
 import Joi from "joi";
@@ -7,7 +7,15 @@ import Loader from "../loader/Loader";
 const Contact = () => {
 
     const [alert, setAlert] = useState({ value: false, type: false });
-    const [loader, setLoader] = useState(false)
+    const [loader, setLoader] = useState(false);
+    const [flood, setFlood] = useState(0);
+    const [blocked, setBlocked] = useState(false);
+
+    useEffect(()=> {
+        if (flood >= 2) {
+            setBlocked(true);
+        }
+    }, [flood])
 
     const formSchema = Joi.object({
         name: Joi.string().min(4).max(20).required().pattern(/^[a-zA-Z]+$/),
@@ -36,47 +44,31 @@ const Contact = () => {
         }
     }
 
-    // Validaciones para evitar flood
-    const validateFlood = (message)=> {
-        const existQuantity = localStorage.getItem("messageQuantity");
-        const existMessage = localStorage.getItem("message");
-        if (existMessage.toLowerCase() === message) {
-            setAlert({ value: true, type: false, message: "Ya has enviado ese mensaje." });
-            return false;
-        }
-        if (existQuantity) {
-            const item = parseInt(existQuantity);
-            if (item > 0 && item < 2) {
-                localStorage.setItem("messageQuantity", item + 1);
-            } else {
-                setAlert({ value: true, type: false, message: "Ya has enviado demasiados mensajes." });
-                return false;
-            }
-        } else {
-            localStorage.setItem("messageQuantity", 1);
-        }
-        return true;
+    const clearForm = (ev)=> {
+        ev.target[0].value = "";
+        ev.target[1].value = "";
+        ev.target[2].value = "";
+        ev.target[3].value = "";
     }
 
     const onSubmitHandler = (ev)=> {
         ev.preventDefault();
-        const [name, lastname, email, message] = [ev.target[0].value, ev.target[1].value, ev.target[2].value, ev.target[3].value.toLowerCase()];
-        if (validateForm({ name, lastname, email, message })) {
-            if (validateFlood(message)) {
+        if (!blocked) {
+            const [name, lastname, email, message] = [ev.target[0].value, ev.target[1].value, ev.target[2].value, ev.target[3].value.toLowerCase()];
+            if (validateForm({ name, lastname, email, message })) {
                 setLoader(true);
                 emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, ev.target, process.env.REACT_APP_PUBLIC_KEY).then(res => {
-                    localStorage.setItem("message", message);
+                    clearForm(ev);
                     setLoader(false);
+                    setFlood(flood => flood + 1);
                     return setAlert({ value: true, type: true, message: "Tu mensaje se envió correctamente." });
                 }).catch(error => {
                     setLoader(false);
-                    return setAlert({ value: true, type: false, message: "Ha ocurrido un error, intente más tarde." });
+                    return setAlert({ value: true, type: false, message: "Ha ocurrido un error, intente de nuevo más tarde." });
                 })
             } else {
                 return;
             }
-        } else {
-            return;
         }
     }
 
