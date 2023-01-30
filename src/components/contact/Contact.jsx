@@ -2,10 +2,12 @@ import { useState } from "react";
 import "./contact.scss";
 import emailjs from "@emailjs/browser";
 import Joi from "joi";
+import Loader from "../loader/Loader";
 
 const Contact = () => {
 
     const [alert, setAlert] = useState({ value: false, type: false });
+    const [loader, setLoader] = useState(false)
 
     const formSchema = Joi.object({
         name: Joi.string().min(4).max(20).required().pattern(/^[a-zA-Z]+$/),
@@ -61,10 +63,13 @@ const Contact = () => {
         const [name, lastname, email, message] = [ev.target[0].value, ev.target[1].value, ev.target[2].value, ev.target[3].value.toLowerCase()];
         if (validateForm({ name, lastname, email, message })) {
             if (validateFlood(message)) {
+                setLoader(true);
                 emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, ev.target, process.env.REACT_APP_PUBLIC_KEY).then(res => {
                     localStorage.setItem("message", message);
+                    setLoader(false);
                     return setAlert({ value: true, type: true, message: "Tu mensaje se envió correctamente." });
                 }).catch(error => {
+                    setLoader(false);
                     return setAlert({ value: true, type: false, message: "Ha ocurrido un error, intente más tarde." });
                 })
             } else {
@@ -76,6 +81,7 @@ const Contact = () => {
     }
 
     const alertClassname = alert.type ? 'success' : '';
+    const buttonValue = loader ? <Loader width={18} height={18} /> : "Enviar";
 
     return (
         <section id="contacto">
@@ -87,7 +93,7 @@ const Contact = () => {
                 <input autoComplete="off" type="email" name="email" maxLength={40} minLength={14} placeholder='Email' required />
                 <textarea name="message" maxLength={200} placeholder='Escribí tu mensaje...'/>
                 {alert.value && <p className={alertClassname}>{alert.message}</p>}
-                <button type="submit">Enviar</button>
+                <button type="submit">{buttonValue}</button>
             </form>
         </section>
     )
