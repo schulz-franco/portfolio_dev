@@ -40,7 +40,7 @@ const Contact = () => {
 
     return (
         <section id="contacto">
-            <h2>Contactame ahora</h2>
+            <h2>Contáctame ahora</h2>
             <span>Envíame un mensaje <b>fácil y rápido</b></span>
             <form onSubmit={(ev) => onSubmitHandler(ev)} >
                 <input autoComplete="off" type="text" name="name" maxLength={20} minLength={4} placeholder='Nombre' required />

@@ -6,7 +6,7 @@ export const data = [
     {
         image: gameImg,
         title: "Tic Tac Toe",
-        text: "Juego Tic Tac Toe con puntuación y reset. Proximamente multijugador.",
+        text: "Juego Tic Tac Toe con puntuación y reset. Próximamente multijugador.",
         state: false,
         url: "",
         github: "https://github.com/schulz-franco/tic-tac-toe"
@@ -14,7 +14,7 @@ export const data = [
     {
         image: authImg,
         title: "Plantilla de autenticación",
-        text: "Frontend y backend de sistema de autenticación basico sin JWT.",
+        text: "Frontend y backend de sistema de autenticación básico sin JWT.",
         state: false,
         url: "",
         github: "https://github.com/schulz-franco/basic_auth_template"

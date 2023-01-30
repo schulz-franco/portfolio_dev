@@ -4,13 +4,13 @@
             "year": 2020,
             "title": "Mi inicio en el desarrollo",
             "learn": ["python", "sql","html", "css", "javascript"],
-            "text": "Traía algunos conocimientos de ejercicios hechos en la adolescencia y en el secundario, senté bases solidas respecto a la programacion y seguí haciendo prácticas aisladas y un sistema de gestion con Python y SQL. También hice prácticas con HTML, CSS, Bootstrap y un poco de JS."
+            "text": "Traía algunos conocimientos de ejercicios hechos en la adolescencia y en el secundario, senté bases sólidas respecto a la programación y seguí haciendo prácticas aisladas y un sistema de gestión con Python y SQL. También hice prácticas con HTML, CSS, Bootstrap y un poco de JS."
         },
         {
             "year": 2021,
             "title": "Decidido por el front-end",
             "learn": ["react", "css", "sass", "javascript"],
-            "text": "Decidí especializarme en el frontend por lo que continue avanzando con HTML, CSS, SASS, JS y React haciendo todo tipo de prácticas específicas. Aprendí AJAX, JSON, APIs, manejo de rutas y parámetros, carga diferida, manejo de estados y hooks, conceptos de optimización, mejores prácticas, mejoras en el diseño responsive, etcétera."
+            "text": "Decidí especializarme en el frontend por lo que continué avanzando con HTML, CSS, SASS, JS y React haciendo todo tipo de prácticas específicas. Aprendí AJAX, JSON, APIs, manejo de rutas y parámetros, carga diferida, manejo de estados y hooks, conceptos de optimización, mejores prácticas, mejoras en el diseño responsive, etcétera."
         },
         {
             "year": 2022,
@@ -22,7 +22,7 @@
             "year": 2023,
             "title": "Full-stack",
             "learn": ["next", "express", "node", "mongodb", "git"],
-            "text": "Continue con todo lo anterior implementando las nuevas tecnologias aprendidas (sistemas de autenticación, JWT, manejo de archivos, etcétera). Tuve mi primer experiencia laboral y de trabajo en equipo desarrollando un proyecto en la startup IdentiKit.app como full-stack, en el que sigo actualmente."
+            "text": "Continué con todo lo anterior implementando las nuevas tecnologías aprendidas (sistemas de autenticación, JWT, manejo de archivos, etcétera). Tuve mi primera experiencia laboral y de trabajo en equipo desarrollando un proyecto en la startup IdentiKit.app como full-stack, en el que sigo actualmente."
         }
     ]
 }

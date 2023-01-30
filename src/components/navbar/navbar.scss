@@ -65,12 +65,12 @@ nav.mobile {
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 1.5rem 2rem 2rem 2rem;
+        padding: 1.5rem 2rem;
         gap: 1.4rem;
         z-index: 1;
-        transform: translateY(calc(-344px + 79px));
+        transform: translateY(calc(-375px + 79px));
         opacity: 0.8;
-        transition: all 300ms ease;
+        transition: all 380ms ease;
         border-bottom: 2px solid $primary;
 
         div {

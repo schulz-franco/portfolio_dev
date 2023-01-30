@@ -16,7 +16,7 @@ export const data = {
         {
             image: webImg,
             title: "Movies",
-            text: "Es una web para consultar todo tipo de información de peliculas. Construida con la API de The Movie Database.",
+            text: "Es una web para consultar todo tipo de información de películas. Construida con la API de The Movie Database.",
             year: 2022,
             url: "https://schulz-franco-movies.netlify.app/",
             github: ""
@@ -32,7 +32,7 @@ export const data = {
         {
             image: chatImg,
             title: "Chat privado",
-            text: "Práctica con firebase que permite crear una cuenta, buscar y enviar mensajes e imagenes a otro usuario, eliminar chats, bloquear y desbloquear.",
+            text: "Práctica con Firebase que permite crear una cuenta, buscar y enviar mensajes e imágenes a otro usuario, eliminar chats, bloquear y desbloquear.",
             year: 2022,
             url: "",
             github: "https://github.com/schulz-franco/app_chat_privado"

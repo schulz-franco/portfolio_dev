@@ -15,7 +15,7 @@ const Knowledge = () => {
 
     const currentStyle = { borderColor: "#FF3A5E" }
     const textStyle = focus !== -1 ? { minHeight: "90px" } : {}
-    const currentText = focus !== -1 ? moreInfo : "Toca uno de los cuadros para ver mas información respecto a esa tecnología."
+    const currentText = focus !== -1 ? moreInfo : "Toca uno de los cuadros para ver más información respecto a esa tecnología."
 
     return (
         <section id="conocimientos">

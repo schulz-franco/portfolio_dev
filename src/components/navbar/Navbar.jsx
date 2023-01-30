@@ -6,8 +6,10 @@ import experienceImg from "../../assets/navbar/experience.svg";
 import jobsImg from "../../assets/navbar/jobs.svg";
 import labImg from "../../assets/navbar/lab.svg";
 import bookImg from "../../assets/navbar/book.svg";
+import contactImg from "../../assets/navbar/contact.svg";
+import creditsImg from "../../assets/navbar/credits.svg";
 
-const scrollsMobile = [0, 300, 630, 1050, 200, 200];
+const scrollsMobile = [0, 300, 630, 1050, 200, 200, 200, 200];
 
 const Option = ({id, image, name, setOpen})=> {
 
@@ -46,6 +48,8 @@ const Navbar = () => {
 				<Option id={3} image={jobsImg} name='Proyectos' setOpen={setOpen} />
 				<Option id={4} image={labImg} name='Laboratorio' setOpen={setOpen} />
 				<Option id={5} image={bookImg} name='Conocimientos' setOpen={setOpen} />
+				<Option id={6} image={contactImg} name='Contacto' setOpen={setOpen} />
+				<Option id={7} image={creditsImg} name='Créditos' setOpen={setOpen} />
 			</div>
 		</nav>
 	)

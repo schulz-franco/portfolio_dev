@@ -3,7 +3,7 @@ import "./credits.scss";
 const Credits = () => {
     return (
         <section id="creditos">
-            <h2>Creditos</h2>
+            <h2>Créditos</h2>
             <span>Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a></span>
             <span>Github icon by <a href="https://www.flaticon.es/iconos-gratis/github" title="github iconos">Pixel perfect - Flaticon</a></span>
             <span>Instagram icon by <a href="https://www.flaticon.es/iconos-gratis/instagram" title="instagram iconos">edt.im - Flaticon</a></span>
