@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../../mixins";
 
 section#experiencia {
     display: flex;
@@ -81,6 +81,10 @@ section#experiencia {
         @include x500 {
             font-size: 1.2rem;
             min-height: 180px;
+        }
+
+        @include x600 {
+            min-height: 135px;
         }
     }
 }

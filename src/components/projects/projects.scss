@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../../mixins";
 
 section#proyectos {
     padding: 0 2rem;
@@ -87,6 +87,10 @@ section#proyectos {
 
             @include x500 {
                 font-size: 1.2rem;
+            }
+
+            @include x600 {
+                font-size: 1.3rem;
             }
         }
     }

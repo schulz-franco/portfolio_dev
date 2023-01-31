@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../../mixins";
 
 section#conocimientos {
     padding: 0 2rem 2rem 2rem;
@@ -19,6 +19,10 @@ section#conocimientos {
         @include x375 {
             min-height: 90px;
         }
+
+        @include x600 {
+            min-height: 68px;
+        }
     }
 
     div.container {
@@ -32,6 +36,10 @@ section#conocimientos {
 
         @include x500 {
             grid-auto-rows: 90px;
+        }
+
+        @include x600 {
+            grid-auto-rows: 100px;
         }
 
         div {
@@ -48,6 +56,10 @@ section#conocimientos {
 
             img {
                 aspect-ratio: 1/1;
+
+                @include x600 {
+                    transform: scale(1.2);
+                }
             }
         }
     }

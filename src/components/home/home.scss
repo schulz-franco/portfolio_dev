@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../../mixins";
 
 section#inicio {
     display: flex;
@@ -8,6 +8,10 @@ section#inicio {
 
     @include x425 {
         padding: 3.5rem 2rem;
+    }
+
+    @include x600 {
+        padding: 4rem 2rem;
     }
 
     h3, h2 {
@@ -86,6 +90,11 @@ section#inicio {
             right: 2.5rem;
             top: -2.6rem;
             font-size: 17em;
+        }
+
+        @include x600 {
+            font-size: 18em;
+            right: 3.5rem;
         }
     }
 }

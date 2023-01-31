@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../../mixins";
 
 section#creditos {
     padding: 1.5rem 2rem 1rem 2rem;
@@ -22,6 +22,10 @@ section#creditos {
 
         @include x360 {
             font-size: 1rem;
+        }
+
+        @include x600 {
+            font-size: 1.1rem;
         }
 
         b {

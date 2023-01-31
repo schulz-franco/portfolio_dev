@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../../mixins";
 
 section#contacto {
     padding: 1.5rem 2rem 2rem 2rem;
@@ -54,6 +54,10 @@ section#contacto {
 
             @include x500 {
                 height: 140px;
+            }
+
+            @include x600 {
+                height: 120px;
             }
         }
 
