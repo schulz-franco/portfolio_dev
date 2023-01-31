@@ -28,10 +28,19 @@ section#laboratorio {
             margin-bottom: 0.5rem;
             font-weight: normal;
             font-size: 1.2em;
+
+            @include x500 {
+                font-size: 1.3em;
+                margin-bottom: 0.6rem;
+            }
         }
 
         p {
             margin-bottom: 0.7rem;
+
+            @include x500 {
+                font-size: 1.2rem;;
+            }
         }
 
         span {
@@ -39,12 +48,20 @@ section#laboratorio {
             color: $secondary;
             opacity: 0.6;
             margin-top: 0.5rem;
+
+            @include x500 {
+                font-size: 1rem;
+            }
         }
 
         a {
             text-decoration: none;
             color: $primary;
             font-size: 1.1rem;
+
+            @include x500 {
+                font-size: 1.2rem;
+            }
         }
     }
 }

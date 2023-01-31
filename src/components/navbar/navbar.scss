@@ -22,7 +22,6 @@ nav.mobile {
                 color: $primary;
                 padding: 0 .1rem;
             }
-    
         }
     
         div.menu {
@@ -65,7 +64,7 @@ nav.mobile {
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 1.5rem 2rem;
+        padding: 1.5rem 2rem 1.6rem 2rem;
         gap: 1.4rem;
         z-index: 1;
         transform: translateY(calc(-375px + 79px));
@@ -80,6 +79,10 @@ nav.mobile {
             align-items: center;
             gap: 1rem;
             cursor: pointer;
+
+            @include x500 {
+                font-size: 1.1rem;
+            }
         }
     }
 

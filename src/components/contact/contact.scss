@@ -10,11 +10,20 @@ section#contacto {
 
     span {
         color: $secondary;
-        font-size: 1.1rem;
+        font-size: 1rem;
+        display: inline-block;
 
-        b {
+        span {
             font-weight: normal;
             color: $primary;
+        }
+
+        @include x360 {
+            font-size: 1.1rem;
+        }
+
+        @include x500 {
+            font-size: 1.2rem;
         }
     }
 
@@ -34,10 +43,18 @@ section#contacto {
             color: $secondary;
             resize: none;
             font-family: sans-serif;
+
+            @include x500 {
+                font-size: 1.1rem;
+            }
         }
 
         textarea {
             height: 160px;
+
+            @include x500 {
+                height: 140px;
+            }
         }
 
         input::placeholder, textarea::placeholder {
@@ -56,6 +73,10 @@ section#contacto {
             display: flex;
             justify-content: center;
             cursor: pointer;
+
+            @include x500 {
+                font-size: 1.1rem;
+            }
         }
 
         @keyframes error {

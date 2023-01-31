@@ -19,6 +19,10 @@ section#experiencia {
             border-top: 2px solid transparent;
             grid-row: 1/2;
             cursor: pointer;
+
+            @include x500 {
+                font-size: 1.1rem;
+            }
         }
 
         span.active {
@@ -38,6 +42,11 @@ section#experiencia {
         font-weight: normal;
         font-size: 1.3em;
         margin-top: 0.5rem;
+
+        @include x500 {
+            font-size: 1.4rem;
+            margin-top: 0.3rem;
+        }
     }
 
     div.tech {
@@ -46,11 +55,32 @@ section#experiencia {
         span {
             color: $primary;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
+
+            @include x360 {
+                font-size: 0.9rem;
+            }
+
+            @include x500 {
+                font-size: 1rem;
+            }
         }
     }
 
     p {
-        min-height: 224px;
+        min-height: 269px;
+
+        @include x360 {
+            min-height: 224px;
+        }
+
+        @include x425 {
+            min-height: 202px;
+        }
+
+        @include x500 {
+            font-size: 1.2rem;
+            min-height: 180px;
+        }
     }
 }

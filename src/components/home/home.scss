@@ -6,12 +6,32 @@ section#inicio {
     justify-content: center;
     padding: 3rem 2rem;
 
+    @include x425 {
+        padding: 3.5rem 2rem;
+    }
+
     h3, h2 {
         span {
             color: $primary;
         }
     }
     
+    h2 {
+        font-size: 1.3em;
+
+        @include x360 {
+            font-size: 1.4rem;
+        }
+
+        @include x375 {
+            font-size: 1.6em;
+        }
+
+        @include x500 {
+            font-size: 1.8em;
+        }
+    }
+
     h3 {
         margin-top: 0.5rem;
         padding-right: 3rem;
@@ -20,6 +40,15 @@ section#inicio {
 
         span {
             font-weight: bold;
+        }
+
+        @include x425 {
+            padding-right: 4rem;
+        }
+
+        @include x500 {
+            padding-right: 5rem;
+            font-size: 1.2em;
         }
     }
 
@@ -34,6 +63,10 @@ section#inicio {
         font-size: 1rem;
         color: $white;
         cursor: pointer;
+
+        @include x500 {
+            font-size: 1.1rem;
+        }
     }
 
     span.image {
@@ -44,5 +77,15 @@ section#inicio {
         -webkit-text-stroke: 1px $primary;
         color: $dark1;
         z-index: -2; 
+
+        @include x425 {
+            right: 1.2rem;
+        }
+
+        @include x500 {
+            right: 2.5rem;
+            top: -2.6rem;
+            font-size: 17em;
+        }
     }
 }

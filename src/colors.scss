@@ -4,3 +4,33 @@ $dark3: #101013;
 $primary: #FF3A5E;
 $secondary: #BFBFBF;
 $white: #FFF;
+
+@mixin x360 {
+    @media only screen and (min-width: 360px) {
+        @content;
+    }
+}
+
+@mixin x375 {
+    @media only screen and (min-width: 375px) {
+        @content;
+    }
+}
+
+@mixin x425 {
+    @media only screen and (min-width: 425px) {
+        @content;
+    }
+}
+
+@mixin x500 {
+    @media only screen and (min-width: 500px) {
+        @content;
+    }
+}
+
+@mixin x600 {
+    @media only screen and (min-width: 600px) {
+        @content;
+    }
+}

@@ -36,8 +36,12 @@ section {
 }
 
 section h2 {
-    font-size: 1.6em;
+    font-size: 1.4em;
 	font-weight: normal;
+
+	@include x360 {
+		font-size: 1.6em;
+	}
 }
 
 p {

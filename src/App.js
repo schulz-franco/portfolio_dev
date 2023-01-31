@@ -20,7 +20,7 @@ function App() {
 			<Knowledge />
 			<Contact />
 			<Credits />
-			<span className="copy">Copyright © 2023<b> Franco Schulz.</b></span>
+			<span className="copy">Copyright © 2023 <span>Franco Schulz.</span></span>
 	    </div>
     );
 }

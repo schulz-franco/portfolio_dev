@@ -26,10 +26,19 @@ section#quiensoy {
             font-size: 1.2em;
             margin-bottom: 1rem;
             color: $white;
+
+            @include x500 {
+                margin-bottom: 0.6rem;
+            }
         }
 
         p {
             margin-bottom: 1.5rem;
+
+            @include x500 {
+                font-size: 1.2rem;
+                margin-bottom: 1.2rem;
+            }
         }
 
         div.social {

@@ -33,10 +33,20 @@ section#proyectos {
                 opacity: 0.9;
                 font-weight: 500;
                 margin-bottom: 0.5rem;
+                
+                @include x500 {
+                    font-size: 1.3em;
+                    margin-bottom: 0.6rem;
+                }
             }
             
             p {
                 margin-bottom: 0.7rem;
+
+                @include x500 {
+                    font-size: 1.2rem;
+                    margin-bottom: 0.8rem;
+                }
             }
 
             div {
@@ -50,12 +60,20 @@ section#proyectos {
                     text-decoration: none;
                     color: $primary;
                     cursor: pointer;
+
+                    @include x500 {
+                        font-size: 1.2rem;
+                    }
                 }
 
                 span {
                     color: $secondary;
                     opacity: 0.8;
                     font-size: 0.9rem;
+
+                    @include x500 {
+                        font-size: 1rem;
+                    }
                 }
             }
 
@@ -66,6 +84,10 @@ section#proyectos {
             text-decoration: none;
             font-size: 1.1rem;
             text-align: center;
+
+            @include x500 {
+                font-size: 1.2rem;
+            }
         }
     }
 
