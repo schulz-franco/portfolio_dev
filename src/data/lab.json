@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "image": "/assets/icons/game.svg",
+            "title": "Tic Tac Toe",
+            "text": "Juego Tic Tac Toe con puntuación y reset. Próximamente multijugador.",
+            "state": false,
+            "url": "",
+            "github": "https://github.com/schulz-franco/tic-tac-toe"
+        },
+        {
+            "image": "/assets/icons/auth.svg",
+            "title": "Plantilla de autenticación",
+            "text": "Frontend y backend de sistema de autenticación básico sin JWT.",
+            "state": false,
+            "url": "",
+            "github": "https://github.com/schulz-franco/basic_auth_template"
+        },
+        {
+            "image": "/assets/icons/grid.svg",
+            "title": "Generador CSS",
+            "text": "Aplicación para generar código CSS de manera sencilla, muestra los cambios en tiempo real y genera el código.",
+            "state": true,
+            "url": "",
+            "github": "https://github.com/schulz-franco/generador_css"
+        }
+    ]
+}

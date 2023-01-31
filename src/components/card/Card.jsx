@@ -1,8 +1,4 @@
 import "./card.scss";
-import instagramImg from "../../assets/social/instagram.png";
-import linkedinImg from "../../assets/social/linkedin.png";
-import githubImg from "../../assets/social/github.png";
-import whatsappImg from "../../assets/social/whatsapp.png";
 
 const data = require("../../data/card.json");
 
@@ -15,10 +11,10 @@ const Card = () => {
                 <h4>{data.profile}</h4>
                 <p>{data.text}</p>
                 <div className="social">
-                    <a href={data.instagram}><img width={26} height={26} src={instagramImg} alt="Instagram"/></a>
-                    <a href={data.linkedin}><img width={26} height={26} src={linkedinImg} alt="Linkedin"/></a>
-                    <a href={data.github}><img width={26} height={26} src={githubImg} alt="Github"/></a>
-                    <a href={data.whatsapp}><img width={26} height={26} src={whatsappImg} alt="Whatsapp"/></a>
+                    <a href={data.instagram}><img width={26} height={26} src="/assets/social/instagram.png" alt="Instagram"/></a>
+                    <a href={data.linkedin}><img width={26} height={26} src="/assets/social/linkedin.png" alt="Linkedin"/></a>
+                    <a href={data.github}><img width={26} height={26} src="/assets/social/github.png" alt="Github"/></a>
+                    <a href={data.whatsapp}><img width={26} height={26} src="/assets/social/whatsapp.png" alt="Whatsapp"/></a>
                 </div>
             </article>
         </section>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./knowledge.scss";
 
-const { data } = require("../../data/knowledge");
+const { technologies } = require("../../data/knowledge.json");
 
 const Knowledge = () => {
 
@@ -22,7 +22,7 @@ const Knowledge = () => {
             {!isFocus && <p>Toca uno de los cuadros para ver más información respecto a esa tecnología.</p>}
             {isFocus && <p className="info">{moreInfo}</p>}
             <div className="container">
-                {data.map((tech, index) => {
+                {technologies.map((tech, index) => {
                     return <div style={focus === index ? currentStyle : {}} onClick={()=> onClickHandler(index, tech.text)} key={tech.name}><img width={tech.size ? tech.size : 40} height={tech.size ? tech.size : 40} src={tech.src} alt={tech.name} /></div>
                 })}
             </div>

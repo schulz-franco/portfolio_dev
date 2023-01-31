@@ -1,13 +1,5 @@
 import { useState } from "react";
 import "./navbar.scss";
-import homeImg from "../../assets/navbar/home.svg";
-import profileImg from "../../assets/navbar/profile.svg";
-import experienceImg from "../../assets/navbar/experience.svg";
-import jobsImg from "../../assets/navbar/jobs.svg";
-import labImg from "../../assets/navbar/lab.svg";
-import bookImg from "../../assets/navbar/book.svg";
-import contactImg from "../../assets/navbar/contact.svg";
-import creditsImg from "../../assets/navbar/credits.svg";
 
 const sections = ["inicio", "quiensoy", "experiencia", "proyectos", "laboratorio", "conocimientos", "contacto", "creditos"];
 
@@ -42,14 +34,14 @@ const Navbar = () => {
 			</div>
 			</div>
 			<div className={scrollableClass}>
-				<Option id={0} image={homeImg} name='Inicio' setOpen={setOpen} />
-				<Option id={1} image={profileImg} name='Quien soy' setOpen={setOpen} />
-				<Option id={2} image={experienceImg} name='Experiencia' setOpen={setOpen} />
-				<Option id={3} image={jobsImg} name='Proyectos' setOpen={setOpen} />
-				<Option id={4} image={labImg} name='Laboratorio' setOpen={setOpen} />
-				<Option id={5} image={bookImg} name='Conocimientos' setOpen={setOpen} />
-				<Option id={6} image={contactImg} name='Contacto' setOpen={setOpen} />
-				<Option id={7} image={creditsImg} name='Créditos' setOpen={setOpen} />
+				<Option id={0} image="/assets/navbar/home.svg" name='Inicio' setOpen={setOpen} />
+				<Option id={1} image="/assets/navbar/profile.svg" name='Quien soy' setOpen={setOpen} />
+				<Option id={2} image="/assets/navbar/experience.svg" name='Experiencia' setOpen={setOpen} />
+				<Option id={3} image="/assets/navbar/jobs.svg" name='Proyectos' setOpen={setOpen} />
+				<Option id={4} image="/assets/navbar/lab.svg" name='Laboratorio' setOpen={setOpen} />
+				<Option id={5} image="/assets/navbar/book.svg" name='Conocimientos' setOpen={setOpen} />
+				<Option id={6} image="/assets/navbar/contact.svg" name='Contacto' setOpen={setOpen} />
+				<Option id={7} image="/assets/navbar/credits.svg" name='Créditos' setOpen={setOpen} />
 			</div>
 		</nav>
 	)

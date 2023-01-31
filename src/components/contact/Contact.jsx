@@ -1,21 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./contact.scss";
 import emailjs from "@emailjs/browser";
 import Joi from "joi";
 import Loader from "../loader/Loader";
+import Captcha from "../captcha/Captcha";
 
 const Contact = () => {
 
     const [alert, setAlert] = useState({ value: false, type: false });
     const [loader, setLoader] = useState(false);
-    const [flood, setFlood] = useState(0);
-    const [blocked, setBlocked] = useState(false);
-
-    useEffect(()=> {
-        if (flood >= 2) {
-            setBlocked(true);
-        }
-    }, [flood])
 
     const formSchema = Joi.object({
         name: Joi.string().min(4).max(20).required().pattern(/^[a-zA-Z]+$/),
@@ -53,22 +46,19 @@ const Contact = () => {
 
     const onSubmitHandler = (ev)=> {
         ev.preventDefault();
-        if (!blocked) {
-            const [name, lastname, email, message] = [ev.target[0].value, ev.target[1].value, ev.target[2].value, ev.target[3].value.toLowerCase()];
-            if (validateForm({ name, lastname, email, message })) {
-                setLoader(true);
-                emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, ev.target, process.env.REACT_APP_PUBLIC_KEY).then(res => {
-                    clearForm(ev);
-                    setLoader(false);
-                    setFlood(flood => flood + 1);
-                    return setAlert({ value: true, type: true, message: "Tu mensaje se envió correctamente." });
-                }).catch(error => {
-                    setLoader(false);
-                    return setAlert({ value: true, type: false, message: "Ha ocurrido un error, intente de nuevo más tarde." });
-                })
-            } else {
-                return;
-            }
+        const [name, lastname, email, message] = [ev.target[0].value, ev.target[1].value, ev.target[2].value, ev.target[3].value.toLowerCase()];
+        if (validateForm({ name, lastname, email, message })) {
+            setLoader(true);
+            emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, ev.target, process.env.REACT_APP_PUBLIC_KEY).then(res => {
+                clearForm(ev);
+                setLoader(false);
+                return setAlert({ value: true, type: true, message: "Tu mensaje se envió correctamente." });
+            }).catch(error => {
+                setLoader(false);
+                return setAlert({ value: true, type: false, message: "Ha ocurrido un error, intente de nuevo más tarde." });
+            })
+        } else {
+            return;
         }
     }
 
@@ -85,6 +75,7 @@ const Contact = () => {
                 <input autoComplete="off" type="email" name="email" maxLength={40} minLength={14} placeholder='Email' required />
                 <textarea name="message" maxLength={200} placeholder='Escribí tu mensaje...'/>
                 {alert.value && <p className={alertClassname}>{alert.message}</p>}
+                <Captcha />
                 <button type="submit">{buttonValue}</button>
             </form>
         </section>
