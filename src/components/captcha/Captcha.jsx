@@ -3,8 +3,22 @@ import React from "react"
 export default class Captcha extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { userCode: "", length: 10, generatedCode: "" }
-        this.alphanumeric = "qwertyuiopasdfghjklzxcvbnm0123456789"
+        this.state = { userCode: "", length: 10, generatedCode: "" };
+        this.alphanumeric = "qwertyuiopasdfghjklzxcvbnm0123456789";
+        this.canvasRef = React.createRef(null);
+    }
+
+    loadCodeToCanvas = ()=> {
+        const canvas = this.canvasRef.current;
+        const canvasContext = canvas.getContext("2d");
+        canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+        canvasContext.fillStyle = "#fff";
+        canvasContext.font = "bold 40px Verdana";
+        canvasContext.textBaseline = "middle";
+        canvasContext.textAlign = "center";
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        canvasContext.fillText(this.state.generatedCode, centerX, centerY);
     }
 
     generateCode = ()=> {
@@ -24,12 +38,17 @@ export default class Captcha extends React.Component {
         return this.setState({ ...this.state, generatedCode });
     }
 
+    showNewCode = ()=> {
+        this.generateCode();
+        this.loadCodeToCanvas();
+    }
+
     render() {
         return(
             <div id="captchaCode">
                 <div className="container">
-                    <span>{this.state.generatedCode}</span>
-                    <div onClick={this.generateCode} className="reload">Generar</div>
+                    <canvas style={{ width: '100%', height: '120px' }} ref={this.canvasRef}></canvas>
+                    <div onClick={() => this.showNewCode()} className="reload">Generar</div>
                 </div>
                 <input onChange={(ev) => this.setState({ ...this.state, userCode: ev.target.value })} type="text" />
             </div>
