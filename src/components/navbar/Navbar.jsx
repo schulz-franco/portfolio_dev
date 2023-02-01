@@ -26,12 +26,12 @@ const Navbar = () => {
 	return (
 		<nav className="mobile">
 			<div className="container">
-			<h2>FRAN<b>{'{'}</b>O<b>{'}'}</b></h2>
-			<div onClick={onOpenHandler} className={menuClass}>
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
+				<h2>FRAN<b>{'{'}</b>O<b>{'}'}</b></h2>
+				<div onClick={onOpenHandler} className={menuClass}>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 			</div>
 			<div className={scrollableClass}>
 				<Option id={0} image="/assets/navbar/home.svg" name='Inicio' setOpen={setOpen} />
