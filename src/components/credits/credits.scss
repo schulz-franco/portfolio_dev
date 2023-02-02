@@ -18,7 +18,7 @@ section#creditos {
     span {
         color: $secondary;
         margin-bottom: 0.3rem;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
 
         @include x360 {
             font-size: 1rem;
@@ -42,7 +42,7 @@ span.copy {
     display: inline-block;
     text-align: center;
     background-color: $dark2;
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     @include x360 {
         font-size: 1.1rem;

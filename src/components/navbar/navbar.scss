@@ -60,17 +60,18 @@ nav.mobile {
     div.scrollable {
         position: fixed;
         top: 0;
-        background-color: $dark2;
+        background-color: $dark1;
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 1.5rem 2rem 1.6rem 2rem;
+        padding: 0 2rem 1.6rem 2rem;
         gap: 1.4rem;
         z-index: 1;
-        transform: translateY(calc(-375px + 79px));
+        transform: translateY(calc(-343px + 79px));
         opacity: 0.8;
         transition: all 380ms ease;
-        border-bottom: 2px solid $primary;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
 
         div {
             text-decoration: none;

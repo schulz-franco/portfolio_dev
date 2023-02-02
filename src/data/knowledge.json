@@ -55,7 +55,7 @@
             "text": "MongoDB es una base de datos de documentos que ofrece gran escalabilidad, flexibilidad y un modelo de consultas avanzado."
         },
         {
-            "src": "/assets/technologies/next.png",
+            "src": "/assets/technologies/next.svg",
             "name": "NextJS",
             "text": "Next.js es un framework de JavaScript para construir aplicaciones React renderizadas del lado del servidor.",
             "size": 46
