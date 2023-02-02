@@ -1,17 +1,29 @@
 @import "../../mixins";
 
 section#quiensoy {
-    margin-top: 3rem;
+    padding-top: 3rem;
     
+    @include x768 {
+        padding: 2.5rem 4rem 0 4rem;
+    }
+
     article {
         padding: 2rem;
         background-color: $dark3;
         display: flex;
         flex-direction: column;
     
+        @include x768 {
+            border-radius: 6px;
+        }
+
         span {
             color: $primary;
             margin-bottom: 0.4rem;
+
+            @include x768 {
+                font-size: 1.1rem;
+            }
         }
 
         h4 {

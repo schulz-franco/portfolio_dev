@@ -4,14 +4,18 @@ import "./captcha.scss";
 export default class Captcha extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { userCode: "", length: 10, generatedCode: "" };
-        this.alphanumeric = "qwertyuiopasdfghjklzxcvbnm0123456789";
+        this.state = { userCode: "", length: 8, generatedCode: "" };
+        this.alphanumeric = "qwertyupasdfghjkzxcvbnm123456789";
         this.canvasRef = React.createRef(null);
         this.inputRef = React.createRef(null);
     }
 
     validate = ()=> {
         this.inputRef.current.value = "";
+        console.log({
+            generated: this.state.generatedCode,
+            user: this.state.userCode
+        })
         return this.state.generatedCode === this.state.userCode;
     }
 
@@ -36,7 +40,7 @@ export default class Captcha extends React.Component {
             canvasContext.save();
             const randomNumber = Math.floor(Math.random() * 3);
             canvasContext.font = `${fontWeightList[randomNumber]} ${fontSizeList[randomNumber]} ${fontFamilyList[randomNumber]}`;
-            canvasContext.translate(-centerX / 2 - 32, 0);
+            canvasContext.translate(-centerX / 2 - 10, 0);
             canvasContext.rotate(Math.random() * 0.09);
             if (fontWeightList[randomNumber] === '1000' && fontSizeList[randomNumber] === '50px' && !lastStroke && countStroke < 2) {
                 canvasContext.strokeText(generatedCode[index], centerX + 24 * index, centerY);

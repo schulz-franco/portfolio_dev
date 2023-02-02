@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import "./experience.scss";
 
 const data = require("../../data/experience.json");
@@ -6,13 +7,17 @@ const data = require("../../data/experience.json");
 const Experience = () => {
 
     const [currentOption, setCurrentOption] = useState(0);
+    const isTablet = useMediaQuery({
+        query: '(min-width: 768px)'
+    })
 
     const ifCurrent = (option) => {
         if (currentOption === option) return "active"
         return ""
     }
 
-    const divActiveStyle = { transform: `translateX(${currentOption}00%)` }
+    const translate = isTablet ? `translateY(${currentOption}00%)` : `translateX(${currentOption}00%)`;
+    const divActiveStyle = { transform: translate }
 
     return (
         <section id="experiencia">
@@ -23,14 +28,16 @@ const Experience = () => {
                     return <span key={info.year} className={ifCurrent(index)} onClick={()=> setCurrentOption(index)}>{info.year}</span>
                 })}
             </div>
-            <h3>{data.years[currentOption].title}</h3>
-            <div className="tech">
-                {data.years[currentOption].learn.map((tech, index) => {
-                    if (index !== data.years[currentOption].learn.length - 1) return <span key={tech}>{tech} - </span>
-                    return <span key={tech}>{tech}</span> 
-                })}
+            <div className="text">
+                <h3>{data.years[currentOption].title}</h3>
+                <div className="tech">
+                    {data.years[currentOption].learn.map((tech, index) => {
+                        if (index !== data.years[currentOption].learn.length - 1) return <span key={tech}>{tech} - </span>
+                        return <span key={tech}>{tech}</span> 
+                    })}
+                </div>
+                <p>{data.years[currentOption].text}</p>
             </div>
-            <p>{data.years[currentOption].text}</p>
         </section>
     )
 }

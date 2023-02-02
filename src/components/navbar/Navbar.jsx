@@ -1,13 +1,16 @@
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import "./navbar.scss";
 
 const sections = ["inicio", "quiensoy", "experiencia", "proyectos", "laboratorio", "conocimientos", "contacto", "creditos"];
 
-const Option = ({id, image, name, setOpen})=> {
+const Option = ({id, image, name, setOpen, isTablet})=> {
+
+	const navbarHeight = isTablet ? 99 : 80;
 
 	const onClickHandler = ()=> {
 		setOpen(false);
-		window.scroll({ top: document.getElementById(sections[id]).offsetTop - 80, behavior: 'smooth' })
+		window.scroll({ top: document.getElementById(sections[id]).offsetTop - navbarHeight, behavior: 'smooth' })
 	}
 
 	return <div onClick={onClickHandler}><img width={20} height={20} src={image} alt={name} />{name}</div>
@@ -15,6 +18,9 @@ const Option = ({id, image, name, setOpen})=> {
 
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
+	const isTablet = useMediaQuery({
+        query: '(min-width: 768px)'
+    })
 
 	const onOpenHandler = ()=> {
 		setOpen(!open);
@@ -34,14 +40,14 @@ const Navbar = () => {
 				</div>
 			</div>
 			<div className={scrollableClass}>
-				<Option id={0} image="/assets/navbar/home.svg" name='Inicio' setOpen={setOpen} />
-				<Option id={1} image="/assets/navbar/profile.svg" name='Quien soy' setOpen={setOpen} />
-				<Option id={2} image="/assets/navbar/experience.svg" name='Experiencia' setOpen={setOpen} />
-				<Option id={3} image="/assets/navbar/jobs.svg" name='Proyectos' setOpen={setOpen} />
-				<Option id={4} image="/assets/navbar/lab.svg" name='Laboratorio' setOpen={setOpen} />
-				<Option id={5} image="/assets/navbar/book.svg" name='Conocimientos' setOpen={setOpen} />
-				<Option id={6} image="/assets/navbar/contact.svg" name='Contacto' setOpen={setOpen} />
-				<Option id={7} image="/assets/navbar/credits.svg" name='Créditos' setOpen={setOpen} />
+				<Option id={0} isTablet={isTablet} image="/assets/navbar/home.svg" name='Inicio' setOpen={setOpen} />
+				<Option id={1} isTablet={isTablet} image="/assets/navbar/profile.svg" name='Quien soy' setOpen={setOpen} />
+				<Option id={2} isTablet={isTablet} image="/assets/navbar/experience.svg" name='Experiencia' setOpen={setOpen} />
+				<Option id={3} isTablet={isTablet} image="/assets/navbar/jobs.svg" name='Proyectos' setOpen={setOpen} />
+				<Option id={4} isTablet={isTablet} image="/assets/navbar/lab.svg" name='Laboratorio' setOpen={setOpen} />
+				<Option id={5} isTablet={isTablet} image="/assets/navbar/book.svg" name='Conocimientos' setOpen={setOpen} />
+				<Option id={6} isTablet={isTablet} image="/assets/navbar/contact.svg" name='Contacto' setOpen={setOpen} />
+				<Option id={7} isTablet={isTablet} image="/assets/navbar/credits.svg" name='Créditos' setOpen={setOpen} />
 			</div>
 		</nav>
 	)

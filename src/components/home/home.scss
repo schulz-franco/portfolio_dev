@@ -4,7 +4,7 @@ section#inicio {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3rem 2rem;
+    padding: 2.5rem 2rem 1rem 2rem;
 
     @include x425 {
         padding: 3.5rem 2rem;
@@ -14,6 +14,10 @@ section#inicio {
         padding: 4rem 2rem;
     }
 
+    @include x768 {
+        padding: 4rem 4rem;
+    }
+
     h3, h2 {
         span {
             color: $primary;
@@ -21,7 +25,7 @@ section#inicio {
     }
     
     h2 {
-        font-size: 1.3em;
+        font-size: 1.2em;
 
         @include x360 {
             font-size: 1.4rem;
@@ -34,6 +38,10 @@ section#inicio {
         @include x500 {
             font-size: 1.8em;
         }
+
+        @include x768 {
+            font-size: 1.9rem;
+        }
     }
 
     h3 {
@@ -41,6 +49,7 @@ section#inicio {
         padding-right: 3rem;
         color: $secondary;
         font-weight: normal;
+        font-size: 1.1em;
 
         span {
             font-weight: bold;
@@ -54,6 +63,10 @@ section#inicio {
             padding-right: 5rem;
             font-size: 1.2em;
         }
+
+        @include x768 {
+            font-size: 1.4rem;
+        }
     }
 
     button {
@@ -64,9 +77,13 @@ section#inicio {
         padding: 0.6rem;
         border-radius: 4px;
         border: none;
-        font-size: 1rem;
+        font-size: 0.9em;
         color: $white;
         cursor: pointer;
+
+        @include x360 {
+            font-size: 1em;
+        }
 
         @include x500 {
             font-size: 1.1rem;
@@ -75,14 +92,15 @@ section#inicio {
 
     span.image {
         position: absolute;
-        font-size: 16em;
+        font-size: 13em;
         right: 0.8rem;
-        top: -2.2rem;
+        top: -1.8rem;
         -webkit-text-stroke: 1px $primary;
         color: $dark1;
         z-index: -2; 
 
         @include x425 {
+            font-size: 15em;
             right: 1.2rem;
         }
 
@@ -94,7 +112,12 @@ section#inicio {
 
         @include x600 {
             font-size: 18em;
-            right: 3.5rem;
+        }
+
+        @include x768 {
+            top: -0.6rem;
+            right: 3.8rem;
+            font-size: 15em;
         }
     }
 }

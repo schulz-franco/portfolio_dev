@@ -7,6 +7,10 @@ section#laboratorio {
     flex-direction: column;
     gap: 1.5rem;
 
+    @include x768 {
+        padding: 2rem 4rem;
+    }
+
     h2 {
         margin-bottom: -0.5rem;
     }

@@ -3,6 +3,10 @@
 section#conocimientos {
     padding: 0 2rem 2rem 2rem;
 
+    @include x768 {
+        padding: 0 4rem 2rem 4rem;
+    }
+
     p {
         display: inline-block;
         margin-top: 0.6rem;
@@ -40,6 +44,10 @@ section#conocimientos {
 
         @include x600 {
             grid-auto-rows: 100px;
+        }
+
+        @include x768 {
+            grid-template-columns: 1fr 1fr 1fr;
         }
 
         div {

@@ -6,6 +6,11 @@ section#creditos {
     display: flex;
     flex-direction: column;
     
+    @include x768 {
+        padding: 0 4rem;
+        background-color: $dark1;
+    }
+
     h2 {
         margin-bottom: 0.8rem;
     }
@@ -28,6 +33,10 @@ section#creditos {
             font-size: 1.1rem;
         }
 
+        @include x768 {
+            font-size: 1.2rem;
+        }
+
         b {
             font-weight: normal;
             color: $primary;
@@ -45,7 +54,17 @@ span.copy {
     font-size: 0.9rem;
 
     @include x360 {
+        font-size: 1rem;
+    }
+
+    @include x600 {
         font-size: 1.1rem;
+    }
+
+    @include x768 {
+        padding: 1.2rem 2rem;
+        margin-top: 2rem;
+        font-size: 1.2rem;
     }
 
     span {

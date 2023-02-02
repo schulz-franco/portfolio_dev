@@ -15,8 +15,16 @@ nav.mobile {
         position: relative;
         z-index: 2;
         
+        @include x768 {
+            padding: 2rem 4rem;
+        }
+
         h2 {
             font-size: 1.7em;
+
+            @include x768 {
+                font-size: 1.9em;
+            }
 
             b {
                 color: $primary;
@@ -33,6 +41,10 @@ nav.mobile {
             width: 30px;
             cursor: pointer;
     
+            @include x768 {
+                width: 36px;
+            }
+
             div {
                 width: 100%;
                 height: 4px;
@@ -73,6 +85,11 @@ nav.mobile {
         border-bottom-right-radius: 30px;
         border-bottom-left-radius: 30px;
 
+        @include x768 {
+            padding: 0 4rem 1.8rem 4rem;
+            transform: translateY(calc(-369.53px + 99px));
+        }
+
         div {
             text-decoration: none;
             color: $white;
@@ -84,11 +101,19 @@ nav.mobile {
             @include x500 {
                 font-size: 1.1rem;
             }
+
+            @include x768 {
+                font-size: 1.2rem;
+            }
         }
     }
 
     div.scrollable.open {
         transform: translateY(79px);
         opacity: 1;
+
+        @include x768 {
+            transform: translateY(99px);
+        }
     }
 }
