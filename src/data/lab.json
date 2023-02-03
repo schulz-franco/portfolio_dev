@@ -19,7 +19,7 @@
         {
             "image": "/assets/icons/grid.svg",
             "title": "Generador CSS",
-            "text": "Aplicación para generar código CSS de manera sencilla, muestra los cambios en tiempo real y genera el código.",
+            "text": "Generador de código CSS, muestra los cambios y genera el código.",
             "state": true,
             "url": "",
             "github": "https://github.com/schulz-franco/generador_css"

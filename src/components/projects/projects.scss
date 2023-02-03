@@ -23,11 +23,15 @@ section#proyectos {
             grid-template-columns: 1fr 1fr;
         }
 
+        @include x1360 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
         article {
             display: flex;
             flex-direction: column;
             padding: 1.5rem;
-            background-color: $dark3;
+            background-color: $dark2;
             border-radius: 6px;
 
             img {
@@ -54,6 +58,10 @@ section#proyectos {
                 @include x500 {
                     font-size: 1.2rem;
                     margin-bottom: 0.8rem;
+                }
+
+                @include x1360 {
+                    font-size: 1.1rem;
                 }
             }
 
@@ -107,6 +115,10 @@ section#proyectos {
 
             @include x1024 {
                 grid-column: 1/3;
+            }
+
+            @include x1360 {
+                grid-column: 1/4;
             }
         }
     }

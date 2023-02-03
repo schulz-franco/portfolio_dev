@@ -3,7 +3,7 @@
         {
             "image": "/assets/icons/auth.svg",
             "title": "Active Moments",
-            "text": "Es una red social simple ambientada al mundo fitness. Actualmente en construcción",
+            "text": "Red social simple ambientada al mundo fitness. Actualmente en construcción",
             "year": 2023,
             "url": "",
             "github": "https://github.com/identikitapp/team-chiflados"
@@ -11,7 +11,7 @@
         {
             "image": "/assets/icons/web.svg",
             "title": "Movies",
-            "text": "Es una web para consultar todo tipo de información de películas. Construida con la API de The Movie Database.",
+            "text": "Web para consultar información de películas. Construida con la API de The Movie Database.",
             "year": 2022,
             "url": "https://schulz-franco-movies.netlify.app/",
             "github": ""
@@ -19,7 +19,7 @@
         {
             "image": "/assets/icons/gear.svg",
             "title": "App de gestión",
-            "text": "Es una aplicación de gestión simple, permite gestionar productos, ofrece un carrito para concluir ventas, registro de ventas diario y gestión del stock.",
+            "text": "Aplicación de gestión simple, permite gestionar productos y stock, ofrece un carrito para concluir ventas y lleva el registro de ventas diarias.",
             "year": 2022,
             "url": "",
             "github": "https://github.com/schulz-franco/app_gestion"
@@ -27,7 +27,7 @@
         {
             "image": "/assets/icons/chat.svg",
             "title": "Chat privado",
-            "text": "Práctica con Firebase que permite crear una cuenta, buscar y enviar mensajes e imágenes a otro usuario, eliminar chats, bloquear y desbloquear.",
+            "text": "Aplicación de chat, hecha con Firebase.",
             "year": 2022,
             "url": "",
             "github": "https://github.com/schulz-franco/app_chat_privado"
@@ -35,7 +35,7 @@
         {
             "image": "/assets/icons/auth.svg",
             "title": "Red social",
-            "text": "Una red social simple construida con el stack MERN. Actualmente incompleta.",
+            "text": "Red social simple construida con el stack MERN. Actualmente incompleta.",
             "year": 2022,
             "url": "",
             "github": "https://github.com/schulz-franco/red_social_1"
@@ -43,7 +43,7 @@
         {
             "image": "/assets/icons/gear.svg",
             "title": "Sistema de gestión",
-            "text": "Aplicación de escritorio de gestión de inventario, empleados, carrito, ventas y facturas construido con Python y SQLite.",
+            "text": "Aplicación de escritorio para gestión de inventario, empleados, carrito, ventas y facturas.",
             "year": 2020,
             "url": "",
             "github": "https://github.com/schulz-franco/sistema_gestion_comercial"

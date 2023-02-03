@@ -80,8 +80,10 @@ const Contact = () => {
             <h2>Contáctame ahora</h2>
             <span>Envíame un mensaje <span>fácil y rápido</span></span>
             <form onSubmit={(ev) => onSubmitHandler(ev)} >
-                <input autoComplete="off" type="text" name="name" maxLength={20} minLength={4} placeholder='Nombre' required />
-                <input autoComplete="off" type="text" name="lastname" maxLength={20} minLength={4} placeholder='Apellido' required />
+                <div className="names">
+                    <input autoComplete="off" type="text" name="name" maxLength={20} minLength={4} placeholder='Nombre' required />
+                    <input autoComplete="off" type="text" name="lastname" maxLength={20} minLength={4} placeholder='Apellido' required />
+                </div>
                 <input autoComplete="off" type="email" name="email" maxLength={40} minLength={14} placeholder='Email' required />
                 <textarea name="message" maxLength={200} placeholder='Escribí tu mensaje...'/>
                 <Captcha ref={captchaRef} />

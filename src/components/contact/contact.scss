@@ -2,7 +2,7 @@
 
 section#contacto {
     padding: 1.5rem 2rem 2rem 2rem;
-    background-color: $dark3;
+    background-color: $dark2;
 
     @include x768 {
         margin: 1rem 4rem 2rem 4rem;
@@ -42,6 +42,16 @@ section#contacto {
         flex-direction: column;
         gap: 1rem;
 
+        div.names {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            @include x1024 {
+                flex-direction: row;
+            }
+        }
+
         input, textarea {
             width: 100%;
             background: none;
@@ -67,6 +77,14 @@ section#contacto {
 
             @include x600 {
                 height: 120px;
+            }
+
+            @include x1024 {
+                height: 150px;
+            }
+
+            @include x1360 {
+                height: 128px;
             }
         }
 

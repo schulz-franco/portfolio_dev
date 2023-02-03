@@ -55,9 +55,13 @@ p {
 div.row {
 	@include x1024 {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 400px 1fr;
 		grid-template-rows: min-content;
 		padding: 1rem 4rem 1.5rem 4rem;
 		gap: 2rem;
+	}
+
+	@include x1360 {
+		grid-template-columns: 450px min-content;
 	}
 }

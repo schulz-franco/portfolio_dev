@@ -22,6 +22,13 @@ section#experiencia {
 
     @include x1024 {
         grid-template-rows: min-content 180px;
+        background-color: $dark2;
+        padding: 2rem 4rem;
+        margin: 4rem 0 2rem 0;
+    }
+
+    @include x1360 {
+        grid-template-rows: min-content 170px;
     }
 
     div.years {
@@ -29,17 +36,16 @@ section#experiencia {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         background-color: $dark3;
         position: relative;
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
 
         @include x768 {
             display: grid;
             grid-template-columns: min-content;
             grid-template-rows: 1fr 1fr 1fr 1fr;
             align-items: center;
-            border-radius: 0;
-            border-top-right-radius: 6px;
-            border-bottom-right-radius: 6px;
+        }
+
+        @include x1024 {
+            background-color: $dark1;
         }
 
         span {
@@ -138,6 +144,10 @@ section#experiencia {
 
             @include x1024 {
                 min-height: 90px;
+            }
+
+            @include x1360 {
+                min-height: 68px;
             }
         }
     }
