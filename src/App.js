@@ -18,8 +18,10 @@ function App() {
 			<Projects />
 			<Lab />
 			<Knowledge />
-			<Contact />
-			<Credits />
+			<div className='row'>
+				<Contact />
+				<Credits />
+			</div>
 			<span className="copy">Copyright © 2023 <span>Franco Schulz.</span></span>
 	    </div>
     );

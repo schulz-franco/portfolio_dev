@@ -12,59 +12,88 @@ section#quiensoy {
         background-color: $dark3;
         display: flex;
         flex-direction: column;
-    
+        
         @include x768 {
             border-radius: 6px;
         }
+        
+        @include x1024 {
+            display: grid;
+            grid-template-columns: min-content auto;
+            grid-template-rows: min-content;
+            gap: 2rem;
+        }
 
-        span {
-            color: $primary;
-            margin-bottom: 0.4rem;
+        img.profile {
+            display: none;
+            align-self: center;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 6px;
 
-            @include x768 {
-                font-size: 1.1rem;
+            @include x1024 {
+                display: initial;
             }
         }
 
-        h4 {
-            font-weight: normal;
-        }
-
-        h2 {
-            margin-bottom: 0.2rem;
-        }
-
-        h4 {
-            font-size: 1.2em;
-            margin-bottom: 1rem;
-            color: $white;
-
-            @include x500 {
-                margin-bottom: 0.6rem;
-            }
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-
-            @include x500 {
-                font-size: 1.2rem;
-                margin-bottom: 1.2rem;
-            }
-        }
-
-        div.social {
+        div.data {
             display: flex;
-            gap: 1rem;
+            flex-direction: column;
 
-            a {
-                cursor: pointer;
+            @include x1024 {
+                align-self: center;
+            }
 
-                img {
-                    object-fit: cover;
-                    aspect-ratio: 1/1;
+            span {
+                color: $primary;
+                margin-bottom: 0.4rem;
+    
+                @include x768 {
+                    font-size: 1.1rem;
                 }
             }
+    
+            h4 {
+                font-weight: normal;
+            }
+    
+            h2 {
+                margin-bottom: 0.2rem;
+            }
+    
+            h4 {
+                font-size: 1.2em;
+                margin-bottom: 1rem;
+                color: $white;
+    
+                @include x500 {
+                    margin-bottom: 0.6rem;
+                }
+            }
+    
+            p {
+                margin-bottom: 1.5rem;
+    
+                @include x500 {
+                    font-size: 1.2rem;
+                    margin-bottom: 1.2rem;
+                }
+            }
+    
+            div.social {
+                display: flex;
+                gap: 1rem;
+    
+                a {
+                    cursor: pointer;
+    
+                    img {
+                        object-fit: cover;
+                        aspect-ratio: 1/1;
+                    }
+                }
+            }
+    
         }
     }
 }

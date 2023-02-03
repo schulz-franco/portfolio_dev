@@ -9,6 +9,10 @@ section#contacto {
         border-radius: 6px;
     }
 
+    @include x1024 {
+        margin: 0;
+    }
+
     h2 {
         margin-bottom: 0.4rem;
     }

@@ -20,6 +20,10 @@ section#experiencia {
         }
     }
 
+    @include x1024 {
+        grid-template-rows: min-content 180px;
+    }
+
     div.years {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -130,6 +134,10 @@ section#experiencia {
     
             @include x768 {
                 min-height: 135px;
+            }
+
+            @include x1024 {
+                min-height: 90px;
             }
         }
     }

@@ -38,10 +38,6 @@ section#inicio {
         @include x500 {
             font-size: 1.8em;
         }
-
-        @include x768 {
-            font-size: 1.9rem;
-        }
     }
 
     h3 {
@@ -118,6 +114,10 @@ section#inicio {
             top: -0.6rem;
             right: 3.8rem;
             font-size: 15em;
+        }
+
+        @include x1024 {
+            font-size: 14em;
         }
     }
 }

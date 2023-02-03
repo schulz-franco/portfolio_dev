@@ -5,7 +5,7 @@ const Option = ({toSection, name, image})=> {
 		window.scroll({ top: document.getElementById(toSection).offsetTop - 99, behavior: 'smooth' })
 	}
 	if (!image) return <span onClick={onClickHandler}>{name}</span>
-    return <img onClick={onClickHandler} width={20} height={20} src={image} alt={name}/>
+    return <img onClick={onClickHandler} width={22} height={22} src={image} alt={name}/>
 }
 
 const NavbarDesktop = () => {
@@ -21,7 +21,6 @@ const NavbarDesktop = () => {
 				<Option toSection='laboratorio' name='Laboratorio'/>
 				<Option toSection='conocimientos' name='Conocimientos'/>
 				<Option image='/assets/navbar/contact.svg' toSection='contacto' name='Contacto'/>
-				<Option image='/assets/navbar/credits.svg' toSection='creditos' name='Créditos'/>
             </div>
         </nav>
     )

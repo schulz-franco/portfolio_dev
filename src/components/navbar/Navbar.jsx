@@ -4,7 +4,7 @@ import NavbarMobile from "./Mobile";
 
 const Navbar = () => {
 	const isDesktop = useMediaQuery({
-        query: '(min-width: 1024px)'
+        query: '(min-width: 1020px)'
     })
 
 	if (isDesktop) return <NavbarDesktop/>

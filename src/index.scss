@@ -51,3 +51,13 @@ p {
 	word-break: keep-all;
 	line-height: 1.4rem;
 }
+
+div.row {
+	@include x1024 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: min-content;
+		padding: 1rem 4rem 1.5rem 4rem;
+		gap: 2rem;
+	}
+}
