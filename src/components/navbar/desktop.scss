@@ -1,0 +1,45 @@
+@import "../../mixins";
+
+nav.desktop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    padding: 2rem 4rem;
+    background-color: $dark1;
+    display: grid;
+    grid-template-columns: min-content auto min-content;
+
+    h2 {
+        font-size: 1.9em;
+
+        b {
+            color: $primary;
+            padding: 0 .1rem;
+        }
+    }
+
+    div.options {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        span {
+            color: $white;
+            font-size: 1rem;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        img {
+            object-fit: cover;
+            aspect-ratio: 1/1;
+            cursor: pointer;
+
+        }
+
+        img:nth-child(7) {
+            margin-left: 1rem;
+        }
+    }
+}
