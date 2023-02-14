@@ -7,6 +7,10 @@ section#conocimientos {
         padding: 0 4rem 2rem 4rem;
     }
 
+    @include x1024 {
+        padding: 0;
+    }
+
     p {
         display: inline-block;
         margin-top: 0.6rem;
@@ -29,11 +33,11 @@ section#conocimientos {
         }
 
         @include x1024 {
-            min-height: 45px;
+            min-height: 67px;
         }
 
         @include x1360 {
-            min-height: auto;
+            min-height: 46px;
         }
     }
 

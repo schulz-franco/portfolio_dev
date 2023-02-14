@@ -17,11 +17,11 @@ function App() {
 			<Experience />
 			<Projects />
 			<Lab />
-			<Knowledge />
 			<div className='row'>
+				<Knowledge />
 				<Contact />
-				<Credits />
 			</div>
+			<Credits />
 			<span className="copy">Copyright © 2023 <span>Franco Schulz.</span></span>
 	    </div>
     );

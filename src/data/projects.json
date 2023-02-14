@@ -11,7 +11,7 @@
         {
             "image": "/assets/icons/web.svg",
             "title": "Movies",
-            "text": "Web para consultar información de películas. Construida con la API de The Movie Database.",
+            "text": "Sitio de consulta de información de películas.",
             "year": 2022,
             "url": "https://schulz-franco-movies.netlify.app/",
             "github": ""
@@ -19,7 +19,7 @@
         {
             "image": "/assets/icons/gear.svg",
             "title": "App de gestión",
-            "text": "Aplicación de gestión simple, permite gestionar productos y stock, ofrece un carrito para concluir ventas y lleva el registro de ventas diarias.",
+            "text": "Aplicación de gestión de productos, stock, carrito y registro de ventas.",
             "year": 2022,
             "url": "",
             "github": "https://github.com/schulz-franco/app_gestion"
@@ -43,7 +43,7 @@
         {
             "image": "/assets/icons/gear.svg",
             "title": "Sistema de gestión",
-            "text": "Aplicación de escritorio para gestión de inventario, empleados, carrito, ventas y facturas.",
+            "text": "Aplicación de escritorio para gestión de inventario, empleados, carrito, y ventas.",
             "year": 2020,
             "url": "",
             "github": "https://github.com/schulz-franco/sistema_gestion_comercial"

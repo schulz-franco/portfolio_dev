@@ -25,7 +25,7 @@ nav.desktop {
         gap: 1rem;
 
         @include x1360 {
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         span {
@@ -47,7 +47,7 @@ nav.desktop {
 
             @include x1360 {
                 width: 26px;
-                margin-left: 0.5rem;
+                margin-left: 0;
                 height: auto;
             }
         }

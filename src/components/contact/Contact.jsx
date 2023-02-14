@@ -1,19 +1,15 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./contact.scss";
 import emailjs from "@emailjs/browser";
 import Joi from "joi";
 import Loader from "../loader/Loader";
-import Captcha from "../captcha/Captcha";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
 
     const [alert, setAlert] = useState({ value: false, type: false });
     const [loader, setLoader] = useState(false);
-    const captchaRef = useRef(null);
-
-    useEffect(()=> {
-        captchaRef.current.showNewCode();
-    }, [])
+    const recaptchaRef = useRef()
 
     const formSchema = Joi.object({
         name: Joi.string().min(4).max(20).required().pattern(/^[a-zA-Z]+$/),
@@ -38,11 +34,6 @@ const Contact = () => {
             }
             return false;
         }
-        if (!captchaRef.current.validate()) {
-            captchaRef.current.showNewCode();
-            setAlert({ value: true, type: false, message: "El código es incorrecto, intente nuevamente."  });
-            return false
-        }
         return true;
     }
 
@@ -57,15 +48,19 @@ const Contact = () => {
     const onSubmitHandler = (ev)=> {
         ev.preventDefault();
         const [name, lastname, email, message] = [ev.target[0].value, ev.target[1].value, ev.target[2].value, ev.target[3].value.toLowerCase()];
+        
         if (validateForm({ name, lastname, email, message })) {
             setLoader(true);
-            emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, { name, lastname, email, message }, process.env.REACT_APP_PUBLIC_KEY).then(res => {
-                clearForm(ev);
-                setLoader(false);
-                return setAlert({ value: true, type: true, message: "Tu mensaje se envió correctamente." });
-            }).catch(error => {
-                setLoader(false);
-                return setAlert({ value: true, type: false, message: "Ha ocurrido un error, intente de nuevo más tarde." });
+            recaptchaRef.current.executeAsync().then(token => {
+                recaptchaRef.current.reset()
+                emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, { name, lastname, email, message, "g-recaptcha-response": token }, process.env.REACT_APP_PUBLIC_KEY).then(res => {
+                    clearForm(ev);
+                    setLoader(false);
+                    return setAlert({ value: true, type: true, message: "Tu mensaje se envió correctamente." });
+                }).catch(error => {
+                    setLoader(false);
+                    return setAlert({ value: true, type: false, message: "Ha ocurrido un error, intente de nuevo más tarde." });
+                })
             })
         } else {
             return;
@@ -86,10 +81,10 @@ const Contact = () => {
                 </div>
                 <input autoComplete="off" type="email" name="email" maxLength={40} minLength={14} placeholder='Email' required />
                 <textarea name="message" maxLength={200} placeholder='Escribí tu mensaje...'/>
-                <Captcha ref={captchaRef} />
                 {alert.value && <p className={alertClassname}>{alert.message}</p>}
                 <button type="submit">{buttonValue}</button>
             </form>
+            <ReCAPTCHA ref={recaptchaRef} sitekey="6LcZoH0kAAAAANbSEL8qrqsUZXuPblYP-K9RsGSN" size="invisible"/>
         </section>
     )
 }

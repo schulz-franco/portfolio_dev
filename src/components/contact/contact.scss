@@ -46,10 +46,6 @@ section#contacto {
             display: flex;
             flex-direction: column;
             gap: 1rem;
-
-            @include x1024 {
-                flex-direction: row;
-            }
         }
 
         input, textarea {
@@ -102,6 +98,7 @@ section#contacto {
             font-weight: bold;
             display: flex;
             justify-content: center;
+            margin-top: 0.5rem;
             cursor: pointer;
 
             @include x500 {
