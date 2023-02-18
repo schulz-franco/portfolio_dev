@@ -62,6 +62,7 @@ div.row {
 
 		@include x1360 {
 			grid-template-columns: 1.2fr 2fr;
+			gap: 4rem;
 		}
 
 		section#conocimientos {

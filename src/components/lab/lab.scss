@@ -19,6 +19,7 @@ section#laboratorio {
 
     @include x1360 {
         grid-template-columns: 1fr 1fr 1fr;
+        padding: 2rem 4rem 3rem 4rem;
     }
 
     h2 {

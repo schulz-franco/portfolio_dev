@@ -1,8 +1,10 @@
 import "./desktop.scss";
 
 const Option = ({toSection, name, image})=> {
-	const onClickHandler = ()=> {
+	const onClickHandler = (ev)=> {
 		window.scroll({ top: document.getElementById(toSection).offsetTop - 99, behavior: 'smooth' })
+        ev.target.classList.remove('animated')
+        setTimeout(()=> ev.target.classList.add('animated'), 1)
 	}
 	if (!image) return <span onClick={onClickHandler}>{name}</span>
     return <img onClick={onClickHandler} width={22} height={22} src={image} alt={name}/>

@@ -19,7 +19,7 @@ const Knowledge = () => {
     return (
         <section id="conocimientos">
             <h2>Conocimientos</h2>
-            {!isFocus && <p>Toca uno de los cuadros para ver más información respecto a esa tecnología.</p>}
+            {!isFocus && <p>Toca en alguna de las tecnologías para ver más información al respecto.</p>}
             {isFocus && <p className="info">{moreInfo}</p>}
             <div className="container">
                 {technologies.map((tech, index) => {

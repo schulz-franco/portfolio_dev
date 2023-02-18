@@ -39,6 +39,20 @@ nav.desktop {
             }
         }
 
+        span.animated {
+            animation: animated 250ms ease-in;
+        }
+
+        @keyframes animated {
+            0% {
+                color: $primary;
+            }
+
+            100% {
+                color: $white;
+            }
+        }
+
         img {
             object-fit: cover;
             aspect-ratio: 1/1;

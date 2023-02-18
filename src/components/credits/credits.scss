@@ -12,11 +12,9 @@ section#creditos {
     }
 
     @include x1024 {
-        padding: 2rem 4rem;
-        background-color: $dark2;
+        padding: 1.5rem 4rem 2rem 4rem;
         border-radius: 6px;
         height: min-content;
-        margin-top: 1.5rem;
     }
 
     h2 {
@@ -71,17 +69,12 @@ span.copy {
         font-size: 1rem;
     }
 
-    @include x600 {
-        font-size: 1.1rem;
-    }
-
     @include x768 {
         padding: 1.2rem 2rem;
         margin-top: 2rem;
     }
 
     @include x1024 {
-        background-color: $dark1;
         margin-top: 0;
     }
 

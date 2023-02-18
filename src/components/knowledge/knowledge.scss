@@ -9,11 +9,12 @@ section#conocimientos {
 
     @include x1024 {
         padding: 0;
+        padding-top: 1.5rem;
     }
 
     p {
         display: inline-block;
-        margin-top: 0.6rem;
+        margin-top: 0.4rem;
         font-size: 1.1rem;
 
         @include x500 {
@@ -33,7 +34,7 @@ section#conocimientos {
         }
 
         @include x1024 {
-            min-height: 67px;
+            min-height: 68px;
         }
 
         @include x1360 {
@@ -89,6 +90,10 @@ section#conocimientos {
                     transform: scale(1.2);
                 }
             }
+        }
+
+        div:hover {
+            border-color: rgba(128, 128, 128, 0.048);
         }
     }
 }
