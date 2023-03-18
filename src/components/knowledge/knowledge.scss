@@ -22,8 +22,18 @@ section#conocimientos {
         }
     }
 
+    @keyframes newInfo {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
     p.info {
         min-height: 112px;
+        animation: newInfo 400ms;
 
         @include x375 {
             min-height: 90px;

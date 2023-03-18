@@ -17,12 +17,28 @@
             "github": "https://github.com/schulz-franco/basic_auth_template"
         },
         {
-            "image": "/assets/icons/grid.svg",
-            "title": "Generador CSS",
-            "text": "Generador de código CSS, muestra los cambios y genera el código.",
-            "state": true,
+            "image": "/assets/icons/logic.svg",
+            "title": "Retos adventJS",
+            "text": "Mis soluciones a los primeros 7 retos de adventJS 2022.",
+            "state": false,
             "url": "",
-            "github": "https://github.com/schulz-franco/generador_css"
+            "github": "https://github.com/schulz-franco/ejercicios/tree/main/adventjs"
+        },
+        {
+            "image": "/assets/icons/ui.svg",
+            "title": "Resumen de resultados",
+            "text": "Reto 'results-summary-component' de frontendmentor.",
+            "state": false,
+            "url": "",
+            "github": "https://github.com/schulz-franco/ejercicios/tree/main/frontendmentor/results-summary-component"
+        },
+        {
+            "image": "/assets/icons/ui.svg",
+            "title": "Página de producto ecommerce",
+            "text": "Reto 'ecommerce-product-page' de frontendmentor.",
+            "state": false,
+            "url": "",
+            "github": "https://github.com/schulz-franco/ejercicios/tree/main/frontendmentor/ecommerce-product-page"
         }
     ]
 }

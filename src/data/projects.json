@@ -1,14 +1,6 @@
 {
     "projects": [
         {
-            "image": "/assets/icons/auth.svg",
-            "title": "Active Moments",
-            "text": "Red social simple ambientada al mundo fitness. Actualmente en construcción",
-            "year": 2023,
-            "url": "",
-            "github": "https://github.com/identikitapp/team-chiflados"
-        },
-        {
             "image": "/assets/icons/web.svg",
             "title": "Movies",
             "text": "Sitio de consulta de información de películas.",

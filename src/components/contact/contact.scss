@@ -51,7 +51,7 @@ section#contacto {
         input, textarea {
             width: 100%;
             background: none;
-            border: 1px solid $secondary;
+            border: 1px solid #bfbfbf81;
             border-radius: 4px;
             padding: 0.6rem;
             font-size: 1rem;
@@ -66,6 +66,8 @@ section#contacto {
         
         textarea {
             height: 160px;
+            scrollbar-width: thin;
+            scrollbar-color: $primary $dark1;
 
             @include x500 {
                 height: 140px;
@@ -82,6 +84,20 @@ section#contacto {
             @include x1360 {
                 height: 128px;
             }
+        }
+
+        textarea::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        textarea::-webkit-scrollbar-track {
+            background: $dark1;
+        }
+
+        textarea::-webkit-scrollbar-thumb {
+            background-color: $primary;
+            border-radius: 4px;
+            border: 3px solid $dark1;
         }
 
         input::placeholder, textarea::placeholder {

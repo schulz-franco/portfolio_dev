@@ -36,7 +36,7 @@ section#inicio {
         }
 
         @include x500 {
-            font-size: 1.8em;
+            font-size: 1.9em;
         }
     }
 
@@ -61,7 +61,7 @@ section#inicio {
         }
 
         @include x768 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
         }
     }
 
@@ -75,6 +75,8 @@ section#inicio {
         border: none;
         font-size: 0.9em;
         color: $white;
+        box-shadow: 0 0 0 0 transparent;
+        transition: 100ms ease-in;
         cursor: pointer;
 
         @include x360 {
@@ -83,6 +85,13 @@ section#inicio {
 
         @include x500 {
             font-size: 1.1rem;
+        }
+    }
+
+    button:hover {
+        @include x1024 {
+            box-shadow: 0 0 12px 1px #ff3a5e42;
+            transform: translateY(2px);
         }
     }
 

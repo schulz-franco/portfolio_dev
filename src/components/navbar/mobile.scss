@@ -82,8 +82,6 @@ nav.mobile {
         transform: translateY(calc(-343px + 79px));
         opacity: 0.8;
         transition: all 380ms ease;
-        border-bottom-right-radius: 30px;
-        border-bottom-left-radius: 30px;
 
         @include x768 {
             padding: 0 4rem 1.8rem 4rem;

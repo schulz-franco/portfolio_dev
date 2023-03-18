@@ -63,20 +63,30 @@ section#quiensoy {
     
             h4 {
                 font-size: 1.2em;
-                margin-bottom: 1rem;
+                margin-bottom: 0.6rem;
                 color: $white;
-    
-                @include x500 {
-                    margin-bottom: 0.6rem;
-                }
             }
     
             p {
-                margin-bottom: 1.5rem;
+                margin-bottom: 0.4rem;
     
                 @include x500 {
                     font-size: 1.2rem;
-                    margin-bottom: 1.2rem;
+                }
+            }
+
+            p.cv {
+                margin-bottom: 0.8rem;
+
+                a {
+                    font-weight: bold;
+                    color: $primary;
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
     
@@ -90,6 +100,13 @@ section#quiensoy {
                     img {
                         object-fit: cover;
                         aspect-ratio: 1/1;
+                        transition: transform 100ms ease-in;
+                    }
+
+                    @include x1024 {
+                        img:hover {
+                            transform: scale(1.2);
+                        }
                     }
                 }
             }
