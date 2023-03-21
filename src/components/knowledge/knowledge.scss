@@ -33,7 +33,7 @@ section#conocimientos {
 
     p.info {
         min-height: 112px;
-        animation: newInfo 400ms;
+        animation: newInfo 800ms;
 
         @include x375 {
             min-height: 90px;

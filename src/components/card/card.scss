@@ -89,6 +89,22 @@ section#quiensoy {
                     }
                 }
             }
+
+            p.cv.desktop {
+                display: none;
+
+                @include x1024 {
+                    display: inline;
+                }
+            }
+
+            p.cv.mobile {
+                display: inline;
+
+                @include x1024 {
+                    display: none;
+                }
+            }
     
             div.social {
                 display: flex;

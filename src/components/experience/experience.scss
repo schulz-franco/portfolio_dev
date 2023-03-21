@@ -93,6 +93,8 @@ section#experiencia {
             font-weight: normal;
             font-size: 1.3em;
             margin-top: 0.5rem;
+            opacity: 0;
+            transform: translateX(-10px);
     
             @include x500 {
                 font-size: 1.4rem;
@@ -102,6 +104,8 @@ section#experiencia {
     
         div.tech {
             margin-top: -0.6rem;
+            opacity: 0;
+            transform: translateX(-10px);
     
             span {
                 color: $primary;
@@ -120,6 +124,8 @@ section#experiencia {
     
         p {
             min-height: 269px;
+            opacity: 0;
+            transform: translateX(-10px);
     
             @include x360 {
                 min-height: 224px;
@@ -150,5 +156,20 @@ section#experiencia {
                 min-height: 68px;
             }
         }
+
+        p.show, div.show, h3.show {
+            opacity: 1;
+            transform: translateX(0);
+            transition: all 200ms ease-in;
+        }
+
+        div.show {
+            transition-delay: 150ms;
+        }
+
+        p.show {
+            transition-delay: 300ms;
+        }
     }
+
 }

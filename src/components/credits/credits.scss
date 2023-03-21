@@ -24,6 +24,10 @@ section#creditos {
     a {
         text-decoration: none;
         color: $primary;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     span {
