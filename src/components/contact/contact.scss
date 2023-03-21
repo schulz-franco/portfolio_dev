@@ -115,10 +115,18 @@ section#contacto {
             display: flex;
             justify-content: center;
             margin-top: 0.5rem;
+            box-shadow: 0 0 0 0 transparent;
+            transition: box-shadow 100ms ease-in;
             cursor: pointer;
 
             @include x500 {
                 font-size: 1.1rem;
+            }
+        }
+
+        button:hover {
+            @include x1024 {
+                box-shadow: 0 0 12px 1px #ff3a5e42;
             }
         }
 

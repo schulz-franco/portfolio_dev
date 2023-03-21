@@ -37,6 +37,12 @@ section#proyectos {
             padding: 1.5rem;
             background-color: $dark2;
             border-radius: 6px;
+            transform: translateX(-15px);
+            opacity: 0;
+
+            @include x1024 {
+                transform: translateX(0) translateY(-15px);
+            }
 
             img {
                 aspect-ratio: 1/1;
@@ -88,6 +94,12 @@ section#proyectos {
                     @include x500 {
                         font-size: 1.2rem;
                     }
+
+                    &:hover {
+                        @include x1024 {
+                            text-decoration: underline;
+                        }
+                    }
                 }
 
                 span {
@@ -101,6 +113,12 @@ section#proyectos {
                 }
             }
 
+        }
+
+        article.observerShow {
+            transform: translateX(0) translateY(0);
+            opacity: 1;
+            transition: all 200ms ease-in;
         }
 
         a.github {

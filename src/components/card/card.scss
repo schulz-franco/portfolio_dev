@@ -12,7 +12,9 @@ section#quiensoy {
         background-color: $dark2;
         display: flex;
         flex-direction: column;
-        
+        transform: translateY(-15px);
+        opacity: 0;
+
         @include x768 {
             border-radius: 6px;
         }
@@ -128,5 +130,11 @@ section#quiensoy {
             }
     
         }
+    }
+
+    article.observerShow {
+        transform: translateY(0);
+        opacity: 1;
+        transition: all 200ms ease-in;
     }
 }

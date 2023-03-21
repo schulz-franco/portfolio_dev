@@ -91,7 +91,12 @@ section#conocimientos {
             align-items: center;
             border-radius: 6px;
             transition: border 100ms ease-in;
+            transform: scale(0);
             cursor: pointer;
+
+            @include x768 {
+                transform: scale(1);
+            }
 
             img {
                 aspect-ratio: 1/1;
@@ -100,6 +105,11 @@ section#conocimientos {
                     transform: scale(1.2);
                 }
             }
+        }
+
+        div.observerShow {
+            transform: scale(1);
+            transition: transform 200ms ease-in;
         }
 
         div:hover {

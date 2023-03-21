@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { observerAll } from "./utils/intersectionObserver";
 import Card from "./components/card/Card";
 import Contact from "./components/contact/Contact";
 import Experience from "./components/experience/Experience";
@@ -9,6 +11,12 @@ import Navbar from "./components/navbar/Navbar";
 import Projects from "./components/projects/Projects";
 
 function App() {
+
+	useEffect(()=> {
+		const unsub = ()=> observerAll();
+		return unsub();
+	}, [])
+
     return (
 		<div>
 			<Navbar />

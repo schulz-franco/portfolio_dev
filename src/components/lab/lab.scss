@@ -40,6 +40,12 @@ section#laboratorio {
         background-color: $dark2;
         padding: 1.5rem;
         border-radius: 6px;
+        transform: translateX(-15px);
+        opacity: 0;
+
+        @include x1024 {
+            transform: translateX(0) translateY(-15px);
+        }
 
         img {
             aspect-ratio: 1/1;
@@ -93,6 +99,18 @@ section#laboratorio {
             @include x1024 {
                 margin-top: auto;
             }
+
+            &:hover {
+                @include x1024 {
+                    text-decoration: underline;
+                }
+            }
         }
+    }
+
+    article.observerShow {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+        transition: all 200ms ease-in;
     }
 }
